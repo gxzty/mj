@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LobbySceneSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<w:Config id="15b862d4cff"></w:Config>
+	<e:Panel width="720" height="1280" x="0" y="0">
+		<e:Rect x="0" y="0" width="720" height="1280" fillColor="0xc6abab" />
+		<e:Rect width="720" height="200" x="0" y="100" fillColor="0xb53636" anchorOffsetY="0" />
+		<e:Label text="账户余额（元）" horizontalCenter="0" verticalCenter="-450" anchorOffsetX="0" width="210" />
+		<e:Label id="balanceText" text="0" verticalCenter="-393" horizontalCenter="0" />
+		<e:Rect width="720" height="351" x="0" y="415.5" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xffffff" />
+		<e:Button id="lobbyCreateAgentBtn" label="" x="33.03" y="458" width="244" height="133">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="lobby_create_agent_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="lobbyFinancialRecordBtn" label="Button" x="33.03" y="602">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="lobby_financial_record_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="lobbyAgentManagerBtn" label="" x="443.24" y="458">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="lobby_agent_manager_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Panel>
+	<e:Rect width="720" height="100" x="0" y="0" scaleX="1" scaleY="1" fillColor="0x722347"/>
+	<e:Button id="leftBtn0" label="leftBtn" x="0" y="25" scaleX="1" scaleY="1"/>
+	<e:Label id="title0" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="240" y="35"/>
+	<e:Button id="rightBtn0" label="rightBtn" x="620" y="25" scaleX="1" scaleY="1"/>
+</e:Skin>
