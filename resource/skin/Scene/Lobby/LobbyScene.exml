@@ -11,12 +11,12 @@
 		<e:Button id="lobbyCreateAgentBtn" label="" x="33.03" y="458" width="244" height="133">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="lobby_create_agent_png" />
-					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				<e:Image width="100%" height="100%" source="lobby_create_agent_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="lobbyFinancialRecordBtn" label="Button" x="33.03" y="602">
+		<e:Button id="lobbyFinancialRecordBtn" label="" x="33.03" y="602">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
 					<e:Image width="100%" height="100%" source="lobby_financial_record_png" />
@@ -32,9 +32,9 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
+		<e:Rect width="720" height="100" x="0" y="0" scaleX="1" scaleY="1" fillColor="0x722347"/>
+		<e:Button id="leftBtn" label="leftBtn" x="0" y="25" scaleX="1" scaleY="1"/>
+		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="240" y="35"/>
+		<e:Button id="rightBtn" label="rightBtn" x="620" y="25" scaleX="1" scaleY="1"/>
 	</e:Panel>
-	<e:Rect width="720" height="100" x="0" y="0" scaleX="1" scaleY="1" fillColor="0x722347"/>
-	<e:Button id="leftBtn0" label="leftBtn" x="0" y="25" scaleX="1" scaleY="1"/>
-	<e:Label id="title0" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="240" y="35"/>
-	<e:Button id="rightBtn0" label="rightBtn" x="620" y="25" scaleX="1" scaleY="1"/>
 </e:Skin>

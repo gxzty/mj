@@ -8,6 +8,7 @@ class Alert extends eui.Component {
 		if (_title) {
 			_alert.titleDisplay.$setText(_title);
 		}
+		SceneManager.getInstance().addChild(_alert);
 		return _alert;
 	}
 	public constructor() {
@@ -21,10 +22,13 @@ class Alert extends eui.Component {
 		Action.getInstance().TipsOpen(this);
 
 		this.commitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			this.parent.removeChild(this);
+			Action.getInstance().TipsClose(this, ((string) => { 
+				console.log(string);
+				this.parent.removeChild(this);
+			}).bind(this,'adf'));
 		}, this);
 	}
-
+	
 	protected partAdded(partName: string, instance: any): void {
 		super.partAdded(partName, instance);
 	}

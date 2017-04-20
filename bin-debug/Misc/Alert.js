@@ -17,7 +17,10 @@ var Alert = (function (_super) {
         _this.$setY(SceneManager.getInstance().getWinSize().height / 2);
         Action.getInstance().TipsOpen(_this);
         _this.commitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            _this.parent.removeChild(_this);
+            Action.getInstance().TipsClose(_this, (function (string) {
+                console.log(string);
+                _this.parent.removeChild(_this);
+            }).bind(_this, 'adf'));
         }, _this);
         return _this;
     }
@@ -27,6 +30,7 @@ var Alert = (function (_super) {
         if (_title) {
             _alert.titleDisplay.$setText(_title);
         }
+        SceneManager.getInstance().addChild(_alert);
         return _alert;
     };
     Alert.prototype.partAdded = function (partName, instance) {

@@ -12,5 +12,15 @@
         "path": "Scene\\CreateAgent.ts",
         "class": "CreateAgent",
         "parentPath": ""
+    },
+    "15b8c0df45c": {
+        "path": "Scene\\AgentFinancialRecord.ts",
+        "class": "AgentFinancialRecord",
+        "parentPath": ""
+    },
+    "15b8c13b2c5": {
+        "path": "Scene\\AgentManager.ts",
+        "class": "AgentManager",
+        "parentPath": ""
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="CreateAgentSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
-	<w:Config id="15b8bd9e9cf" ></w:Config>
+<e:Skin class="AgentFinancialRecordSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="15b8c0df45c" ></w:Config>
 	<e:Rect width="720" height="100" x="0" y="0" scaleX="1" scaleY="1" fillColor="0x722347"/>
 	<e:Button id="leftBtn" label="leftBtn" x="0" y="25" scaleX="1" scaleY="1"/>
 	<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="-590"/>

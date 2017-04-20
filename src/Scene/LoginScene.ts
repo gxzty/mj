@@ -44,8 +44,9 @@ class LoginScene extends eui.Component {
 
 
 		this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			this.loginBtn.$setEnabled(false);
-						SceneManager.getInstance().replaceLayer(LobbyScene.getInstance());
+			//this.loginBtn.$setEnabled(false);
+			Alert.show("ad");
+			//SceneManager.getInstance().replaceLayer(LobbyScene.getInstance());
 			//15539531989
 			//123456
 			//let loginInfo = 'username=15539531989&password=123456';

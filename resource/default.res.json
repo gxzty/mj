@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "login_btn_png,login_input_png,LoginScene_exml,logo_png,description_json,lobby_create_agent_png,lobby_agent_manager_png,lobby_financial_record_png,LobbyScene_exml,alert_bg_png,alert_commit_png,AlertSkin_exml,TitleSkin_exml,CreateAgent_exml",
+			"keys": "description_json,alert_bg_png,alert_commit_png,AlertSkin_exml,Title_exml,AgentManager_exml,CreateAgent_exml,FinancialRecord_exml,lobby_agent_manager_png,lobby_create_agent_png,lobby_financial_record_png,LobbyScene_exml,login_btn_png,login_input_png,LoginScene_exml,logo_png",
 			"name": "preload"
 		}
 	],
@@ -10,6 +10,61 @@
 			"url": "config/description.json",
 			"type": "json",
 			"name": "description_json"
+		},
+		{
+			"url": "skin/Misc/Alert/AlertSkin.exml",
+			"type": "bin",
+			"name": "AlertSkin_exml"
+		},
+		{
+			"url": "skin/Misc/Alert/alert_bg.png",
+			"type": "image",
+			"name": "alert_bg_png"
+		},
+		{
+			"url": "skin/Misc/Alert/alert_commit.png",
+			"type": "image",
+			"name": "alert_commit_png"
+		},
+		{
+			"url": "skin/Misc/Title/Title.exml",
+			"type": "bin",
+			"name": "Title_exml"
+		},
+		{
+			"url": "skin/Scene/AgentManager/AgentManager.exml",
+			"type": "bin",
+			"name": "AgentManager_exml"
+		},
+		{
+			"url": "skin/Scene/CreateAgent/CreateAgent.exml",
+			"type": "bin",
+			"name": "CreateAgent_exml"
+		},
+		{
+			"url": "skin/Scene/FinancialRecord/FinancialRecord.exml",
+			"type": "bin",
+			"name": "FinancialRecord_exml"
+		},
+		{
+			"url": "skin/Scene/Lobby/LobbyScene.exml",
+			"type": "bin",
+			"name": "LobbyScene_exml"
+		},
+		{
+			"url": "skin/Scene/Lobby/lobby_agent_manager.png",
+			"type": "image",
+			"name": "lobby_agent_manager_png"
+		},
+		{
+			"url": "skin/Scene/Lobby/lobby_create_agent.png",
+			"type": "image",
+			"name": "lobby_create_agent_png"
+		},
+		{
+			"url": "skin/Scene/Lobby/lobby_financial_record.png",
+			"type": "image",
+			"name": "lobby_financial_record_png"
 		},
 		{
 			"url": "skin/Scene/Login/LoginScene.exml",
@@ -30,51 +85,6 @@
 			"url": "skin/Scene/Login/logo.png",
 			"type": "image",
 			"name": "logo_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_create_agent.png",
-			"type": "image",
-			"name": "lobby_create_agent_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_agent_manager.png",
-			"type": "image",
-			"name": "lobby_agent_manager_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_financial_record.png",
-			"type": "image",
-			"name": "lobby_financial_record_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/LobbyScene.exml",
-			"type": "bin",
-			"name": "LobbyScene_exml"
-		},
-		{
-			"url": "skin/Misc/Alert/alert_bg.png",
-			"type": "image",
-			"name": "alert_bg_png"
-		},
-		{
-			"url": "skin/Misc/Alert/alert_commit.png",
-			"type": "image",
-			"name": "alert_commit_png"
-		},
-		{
-			"url": "skin/Scene/CreateAgent/CreateAgent.exml",
-			"type": "bin",
-			"name": "CreateAgent_exml"
-		},
-		{
-			"url": "skin/Misc/Alert/AlertSkin.exml",
-			"type": "bin",
-			"name": "AlertSkin_exml"
-		},
-		{
-			"url": "skin/Misc/Title/TitleSkin.exml",
-			"type": "bin",
-			"name": "TitleSkin_exml"
 		}
 	]
 }

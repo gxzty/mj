@@ -11,6 +11,15 @@ var LobbyScene = (function (_super) {
     function LobbyScene() {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/skin/Scene/Lobby/LobbyScene.exml";
+        _this.lobbyCreateAgentBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            SceneManager.getInstance().replaceLayer(CreateAgent.getInstance());
+        }, _this);
+        _this.lobbyFinancialRecordBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            SceneManager.getInstance().replaceLayer(FinancialRecord.getInstance());
+        }, _this);
+        _this.lobbyAgentManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            SceneManager.getInstance().replaceLayer(AgentManager.getInstance());
+        }, _this);
         var infoCallback = function (e) {
             var foo = zHttp.getInstance().onHttpCompleted(e);
             console.log('返回code:' + foo['code']);
