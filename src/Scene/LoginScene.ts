@@ -2,7 +2,8 @@ class LoginScene extends eui.Component {
 	private loginBtn: eui.Button;
 	private phoneNumber: eui.TextInput;
 	private password: eui.TextInput;
-
+	public autoLoginCheckBox: eui.CheckBox;
+	public rememberPassCheckBox: eui.CheckBox;
 
 	private static m_instance;
 	public onEnter() {
@@ -14,21 +15,20 @@ class LoginScene extends eui.Component {
 		}
 		return this.m_instance;
 	};
-	public reset() {
 
-	}
+
 	public constructor() {
 		super();
 		this.skinName = "resource/skin/Scene/Login/LoginScene.exml";
-		this.password.prompt = "输入密码";
+		
+		zUtils.initInput(this.phoneNumber,"手机号码");
+		zUtils.initInput(this.password,"输入密码");
 		this.password.displayAsPassword = true;
-		this.phoneNumber.prompt = "手机号码";
 
-		this.phoneNumber.text = "15539531989";
-		this.password.text = "123456";
-
-
-		this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+		this.getLocalInfo();
+		
+		let loginBtnCallback = (e: egret.TouchEvent) => {
+			UserObject.saveInfoToLocal();
 			//15539531989
 			//123456
 			let loginInfo = 'username=' + this.phoneNumber.text + '&password=' + this.password.text;
@@ -45,7 +45,7 @@ class LoginScene extends eui.Component {
 					//console.log(UserObject);
 					Alert.showWithCallback(foo['message'], () => { SceneManager.getInstance().backToLobby() });
 				}
-			};
+			}
 
 			var request: egret.HttpRequest = new egret.HttpRequest();
 			request.open("http://192.168.1.211/mj_club/public/agent/login", egret.HttpMethod.POST);
@@ -57,7 +57,36 @@ class LoginScene extends eui.Component {
 				console.log("HttpError");
 				console.log(event);
 			}, this);
-		}, this);
+		};
+
+		if (this.autoLoginCheckBox.$selected) {
+			loginBtnCallback(null);
+		}
+
+		this.rememberPassCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP, ((e:egret.Event,_select:boolean) => {
+			let _status = _select;
+			console.log(_status);
+		}).bind(this.rememberPassCheckBox,this.rememberPassCheckBox.$selected),this);
+		
+		this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,loginBtnCallback, this);
+	}
+	private getLocalInfo() { 
+		if (egret.localStorage.getItem('isRememberPass') == String(true)) {
+			this.rememberPassCheckBox.$setSelected(true);
+			if (egret.localStorage.getItem('password')) {
+				this.password.text = egret.localStorage.getItem('password');
+			} else {
+				this.rememberPassCheckBox.$setSelected(false);
+			}
+		}
+		if (egret.localStorage.getItem('isAutoLogin') == String(true)) {
+			this.autoLoginCheckBox.$setSelected(true);
+			this.rememberPassCheckBox.$setSelected(true);
+			console.log("autologin");
+		}
+		if (egret.localStorage.getItem('username')) {
+			this.phoneNumber.text = egret.localStorage.getItem('username');
+		}
 	}
 
 	public resetInput() {

@@ -4,6 +4,12 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var UserObject = (function () {
     function UserObject() {
     }
+    UserObject.getPassword = function () {
+        return this.Password;
+    };
+    UserObject.setPassword = function (_password) {
+        this.Password = _password;
+    };
     UserObject.getBalance = function () {
         return this.Balance;
     };
@@ -33,6 +39,13 @@ var UserObject = (function () {
     };
     UserObject.setLevel = function (_level) {
         this.Level = _level;
+    };
+    UserObject.saveInfoToLocal = function () {
+        egret.localStorage.clear();
+        egret.localStorage.setItem('username', this.getUsername());
+        egret.localStorage.setItem('password', this.getPassword());
+        egret.localStorage.setItem('isRememberPass', String(LoginScene.getInstance().rememberPassCheckBox.$selected));
+        egret.localStorage.setItem('isAutoLogin', String(LoginScene.getInstance().autoLoginCheckBox.$selected));
     };
     UserObject.userQuit = function () {
         this.Level = "";

@@ -3,9 +3,16 @@ class UserObject {
 	private static FullName;
 	private static Token;
 	private static Level;
+	private static Password;
 
 	private static Balance;
 
+	private static getPassword() {
+		return this.Password;
+	}
+	public static setPassword(_password) {
+		this.Password = _password;
+	}
 	public static getBalance() {
 		return this.Balance;
 	}
@@ -40,7 +47,13 @@ class UserObject {
 	public static setLevel(_level) {
 		this.Level = _level;
 	}
-
+	public static saveInfoToLocal() {
+		egret.localStorage.clear();
+		egret.localStorage.setItem('username',this.getUsername());
+		egret.localStorage.setItem('password',this.getPassword());
+		egret.localStorage.setItem('isRememberPass',String(LoginScene.getInstance().rememberPassCheckBox.$selected));
+		egret.localStorage.setItem('isAutoLogin',String(LoginScene.getInstance().autoLoginCheckBox.$selected));
+    }
 	public static userQuit() {
 		this.Level = "";
 		this.Token = "";
