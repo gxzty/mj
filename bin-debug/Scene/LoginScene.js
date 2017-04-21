@@ -17,7 +17,6 @@ var LoginScene = (function (_super) {
         _this.phoneNumber.text = "15539531989";
         _this.password.text = "123456";
         _this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            _this.loginBtn.$setEnabled(false);
             //15539531989
             //123456
             var loginInfo = 'username=' + _this.phoneNumber.text + '&password=' + _this.password.text;
