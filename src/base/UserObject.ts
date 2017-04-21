@@ -49,10 +49,17 @@ class UserObject {
 	}
 	public static saveInfoToLocal() {
 		egret.localStorage.clear();
-		egret.localStorage.setItem('username',this.getUsername());
-		egret.localStorage.setItem('password',this.getPassword());
-		egret.localStorage.setItem('isRememberPass',String(LoginScene.getInstance().rememberPassCheckBox.$selected));
-		egret.localStorage.setItem('isAutoLogin',String(LoginScene.getInstance().autoLoginCheckBox.$selected));
+		egret.localStorage.setItem('username',LoginScene.getInstance().phoneNumber.text);
+		egret.localStorage.setItem('password',LoginScene.getInstance().password.text);
+		egret.localStorage.setItem('isRememberPass',LoginScene.getInstance().rememberPassCheckBox.$selected?'1':'0');
+		egret.localStorage.setItem('isAutoLogin', LoginScene.getInstance().autoLoginCheckBox.$selected ? '1' : '0');
+		let log = (p) => {
+			console.log(p +':'+ egret.localStorage.getItem(p)+"///");
+		};
+		log('username');
+		log('password');
+		log('isRememberPass');
+		log('isAutoLogin');
     }
 	public static userQuit() {
 		this.Level = "";

@@ -1,7 +1,7 @@
 class LoginScene extends eui.Component {
 	private loginBtn: eui.Button;
-	private phoneNumber: eui.TextInput;
-	private password: eui.TextInput;
+	public phoneNumber: eui.TextInput;
+	public password: eui.TextInput;
 	public autoLoginCheckBox: eui.CheckBox;
 	public rememberPassCheckBox: eui.CheckBox;
 
@@ -62,30 +62,37 @@ class LoginScene extends eui.Component {
 		if (this.autoLoginCheckBox.$selected) {
 			loginBtnCallback(null);
 		}
-
-		this.rememberPassCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP, ((e:egret.Event,_select:boolean) => {
-			let _status = _select;
-			console.log(_status);
-		}).bind(this.rememberPassCheckBox,this.rememberPassCheckBox.$selected),this);
+		this.rememberPassCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP,(e:egret.Event) => {
+			if (!this.rememberPassCheckBox.$selected) {
+				this.autoLoginCheckBox.$setSelected(false);
+		    }
+		}, this);
 		
+		this.autoLoginCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP,(e:egret.Event) => {
+			if (this.autoLoginCheckBox.$selected) {
+				this.rememberPassCheckBox.$setSelected(true);
+		    }
+		}, this);
+
 		this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,loginBtnCallback, this);
 	}
 	private getLocalInfo() { 
-		if (egret.localStorage.getItem('isRememberPass') == String(true)) {
+		let log = (p) => {
+			console.log(p + ':' + egret.localStorage.getItem(p));
+		};
+		log('username');
+		log('password');
+		log('isRememberPass');
+		log('isAutoLogin');
+
+		this.phoneNumber.text = egret.localStorage.getItem('username');
+		if (egret.localStorage.getItem('isRememberPass') == '1') {
 			this.rememberPassCheckBox.$setSelected(true);
-			if (egret.localStorage.getItem('password')) {
-				this.password.text = egret.localStorage.getItem('password');
-			} else {
-				this.rememberPassCheckBox.$setSelected(false);
-			}
+			this.password.text = egret.localStorage.getItem('password');
 		}
-		if (egret.localStorage.getItem('isAutoLogin') == String(true)) {
+		if (egret.localStorage.getItem('isAutoLogin') == '1') {
 			this.autoLoginCheckBox.$setSelected(true);
 			this.rememberPassCheckBox.$setSelected(true);
-			console.log("autologin");
-		}
-		if (egret.localStorage.getItem('username')) {
-			this.phoneNumber.text = egret.localStorage.getItem('username');
 		}
 	}
 

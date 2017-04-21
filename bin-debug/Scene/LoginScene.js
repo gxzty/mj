@@ -10,6 +10,7 @@ var LoginScene = (function (_super) {
     __extends(LoginScene, _super);
     function LoginScene() {
         var _this = _super.call(this) || this;
+        _this.x = 0;
         _this.skinName = "resource/skin/Scene/Login/LoginScene.exml";
         zUtils.initInput(_this.phoneNumber, "手机号码");
         zUtils.initInput(_this.password, "输入密码");
@@ -47,10 +48,16 @@ var LoginScene = (function (_super) {
         if (_this.autoLoginCheckBox.$selected) {
             loginBtnCallback(null);
         }
-        _this.rememberPassCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP, (function (e, _select) {
-            var _status = _select;
-            console.log(_status);
-        }).bind(_this.rememberPassCheckBox, _this.rememberPassCheckBox.$selected), _this);
+        _this.rememberPassCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            if (!_this.rememberPassCheckBox.$selected) {
+                _this.autoLoginCheckBox.$setSelected(false);
+            }
+        }, _this);
+        _this.autoLoginCheckBox.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            if (_this.autoLoginCheckBox.$selected) {
+                _this.rememberPassCheckBox.$setSelected(true);
+            }
+        }, _this);
         _this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, loginBtnCallback, _this);
         return _this;
     }
@@ -65,23 +72,27 @@ var LoginScene = (function (_super) {
     };
     ;
     LoginScene.prototype.getLocalInfo = function () {
-        if (egret.localStorage.getItem('isRememberPass') == String(true)) {
+        var _this = this;
+        this.x++;
+        var log = function (p) {
+            console.log("times:" + String(_this.x) + p + ':' + egret.localStorage.getItem(p));
+        };
+        log('username');
+        log('password');
+        log('isRememberPass');
+        log('isAutoLogin');
+        this.phoneNumber.text = egret.localStorage.getItem('username');
+        if (egret.localStorage.getItem('isRememberPass') == '1') {
             this.rememberPassCheckBox.$setSelected(true);
-            if (egret.localStorage.getItem('password')) {
-                this.password.text = egret.localStorage.getItem('password');
-            }
-            else {
-                this.rememberPassCheckBox.$setSelected(false);
-            }
+            this.password.text = egret.localStorage.getItem('password');
         }
-        if (egret.localStorage.getItem('isAutoLogin') == String(true)) {
+        if (egret.localStorage.getItem('isAutoLogin') == '1') {
             this.autoLoginCheckBox.$setSelected(true);
             this.rememberPassCheckBox.$setSelected(true);
-            console.log("autologin");
         }
-        if (egret.localStorage.getItem('username')) {
-            this.phoneNumber.text = egret.localStorage.getItem('username');
-        }
+        // }
+        // console.log(this.phoneNumber.text + '/' + this.password.text + '/' + String(LoginScene.getInstance().rememberPassCheckBox.$selected) + '/' + String(LoginScene.getInstance().autoLoginCheckBox.$selected));
+        // return;
     };
     LoginScene.prototype.resetInput = function () {
         zUtils.reSetInputText(this.phoneNumber);
