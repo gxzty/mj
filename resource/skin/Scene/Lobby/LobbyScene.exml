@@ -2,39 +2,54 @@
 <e:Skin class="LobbySceneSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<w:Config id="15b862d4cff"></w:Config>
-	<e:Panel width="720" height="1280" x="0" y="0">
-		<e:Rect x="0" y="0" width="720" height="1280" fillColor="0xc6abab" />
-		<e:Rect width="720" height="200" x="0" y="100" fillColor="0xb53636" anchorOffsetY="0" />
-		<e:Label text="账户余额（元）" horizontalCenter="0" verticalCenter="-450" anchorOffsetX="0" width="210" />
-		<e:Label id="balanceText" text="0" verticalCenter="-393" horizontalCenter="0" />
-		<e:Rect width="720" height="351" x="0" y="415.5" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xffffff" />
-		<e:Button id="lobbyCreateAgentBtn" label="" x="33.03" y="458" width="244" height="133">
+	<e:Rect x="0" y="96" width="720" height="1184" fillColor="0xf5f5f5" anchorOffsetY="0" />
+	<e:Image x="0.5" y="95.28" source="lobby_title_png" anchorOffsetY="0" />
+	<e:Label text="账户余额（元）" verticalCenter="-490" anchorOffsetX="84" width="168" size="24" anchorOffsetY="12" x="360" />
+	<e:Label id="balanceText" text="0" verticalCenter="-433" horizontalCenter="0.5" size="34" />
+	<e:Rect width="720" height="432" x="0" y="286" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xffffff" />
+	<e:Button id="lobbyCreateAgentBtn" label="" x="30" y="316" anchorOffsetY="0">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="lobby_create_agent_png" />
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="lobbyFinancialRecordBtn" label="" x="30" y="518">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="lobby_financial_record_png" />
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="lobbyAgentManagerBtn" label="" x="690" y="316" anchorOffsetX="315">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="lobby_agent_manager_png" />
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Group width="720" height="96" x="0" anchorOffsetX="0" anchorOffsetY="0" id="title">
+		<e:Rect width="720" height="96" x="0" y="0" scaleX="1" scaleY="1" fillColor="0xFF772E" />
+		<e:Button id="leftBtn" label="" scaleX="1" scaleY="1" x="30" y="48" anchorOffsetY="16">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="lobby_create_agent_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-				</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="lobbyFinancialRecordBtn" label="" x="33.03" y="602">
-			<e:skinName>
-				<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="lobby_financial_record_png" />
+					<e:Image width="100%" height="100%" source="back_icon_png" />
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Button id="lobbyAgentManagerBtn" label="" x="443.24" y="458">
+		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="360" y="48" anchorOffsetY="15" size="32"
+		         anchorOffsetX="128" />
+		<e:Button id="rightBtn" label="" x="690" y="48" scaleX="1" scaleY="1" anchorOffsetX="36" anchorOffsetY="18">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
-					<e:Image width="100%" height="100%" source="lobby_agent_manager_png" />
+					<e:Image width="100%" height="100%" source="exit_icon_png" />
 					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Rect width="720" height="100" x="0" y="0" scaleX="1" scaleY="1" fillColor="0x722347"/>
-		<e:Button id="leftBtn" label="leftBtn" x="0" y="25" scaleX="1" scaleY="1"/>
-		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="240" y="35"/>
-		<e:Button id="rightBtn" label="rightBtn" x="620" y="25" scaleX="1" scaleY="1"/>
-	</e:Panel>
+	</e:Group>
 </e:Skin>

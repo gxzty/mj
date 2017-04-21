@@ -13,10 +13,14 @@ var FinancialRecord = (function (_super) {
         _this.skinName = "resource/skin/Scene/FinancialRecord/FinancialRecord.exml";
         _this.titleLabel.$setText("财务记录");
         _this.leftBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            SceneManager.getInstance().replaceLayer(LobbyScene.getInstance());
+            SceneManager.getInstance().backToLobby();
         }, _this);
+        UserObject.getChargeRecordInfo();
         return _this;
     }
+    FinancialRecord.prototype.onEnter = function () {
+        UserObject.getChargeRecordInfo();
+    };
     FinancialRecord.getInstance = function () {
         if (this.m_instance == null) {
             this.m_instance = new FinancialRecord();
@@ -24,6 +28,12 @@ var FinancialRecord = (function (_super) {
         return this.m_instance;
     };
     ;
+    FinancialRecord.prototype.addGroupItem = function (s) {
+        this.financialRecordGroup.addChild(s);
+    };
+    FinancialRecord.prototype.resetGroupItems = function () {
+        this.financialRecordGroup.removeChildren();
+    };
     FinancialRecord.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };

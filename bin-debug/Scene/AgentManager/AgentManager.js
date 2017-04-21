@@ -13,10 +13,14 @@ var AgentManager = (function (_super) {
         _this.skinName = "resource/skin/Scene/AgentManager/AgentManager.exml";
         _this.titleLabel.$setText("代理管理");
         _this.leftBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            SceneManager.getInstance().replaceLayer(LobbyScene.getInstance());
+            SceneManager.getInstance().backToLobby();
         }, _this);
+        UserObject.getUsersAgentInfo();
         return _this;
     }
+    AgentManager.prototype.onEnter = function () {
+        UserObject.getUsersAgentInfo();
+    };
     AgentManager.getInstance = function () {
         if (this.m_instance == null) {
             this.m_instance = new AgentManager();
@@ -24,6 +28,12 @@ var AgentManager = (function (_super) {
         return this.m_instance;
     };
     ;
+    AgentManager.prototype.addGroupItem = function (s) {
+        this.agentGroup.addChild(s);
+    };
+    AgentManager.prototype.resetGroupItems = function () {
+        this.agentGroup.removeChildren();
+    };
     AgentManager.prototype.partAdded = function (partName, instance) {
         _super.prototype.partAdded.call(this, partName, instance);
     };

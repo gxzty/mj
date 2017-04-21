@@ -19,10 +19,13 @@ class SceneManager extends eui.UILayer {
 	public getRunningLayer() {
 		return this.currentLayer;
 	}
-
+	public backToLobby() {
+		this.replaceLayer(LobbyScene);
+	}
 	public replaceLayer(_layer: any): void {
 		this.removeChild(this.currentLayer);
-		this.currentLayer = _layer;
+		this.currentLayer = _layer.getInstance();
+		this.checkLayerChange(_layer);
 		this.addChild(this.currentLayer);
 	}
 	public getWinSize() {
@@ -30,5 +33,8 @@ class SceneManager extends eui.UILayer {
 	}
 	public getDirector() {
 		return this.globalLayer;
+	}
+	private checkLayerChange(_layer) {
+		_layer.getInstance().onEnter();
 	}
 }

@@ -12,39 +12,23 @@ var LobbyScene = (function (_super) {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/skin/Scene/Lobby/LobbyScene.exml";
         _this.lobbyCreateAgentBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            SceneManager.getInstance().replaceLayer(CreateAgent.getInstance());
+            SceneManager.getInstance().replaceLayer(CreateAccount);
         }, _this);
         _this.lobbyFinancialRecordBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            SceneManager.getInstance().replaceLayer(FinancialRecord.getInstance());
+            SceneManager.getInstance().replaceLayer(FinancialRecord);
         }, _this);
         _this.lobbyAgentManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            SceneManager.getInstance().replaceLayer(AgentManager.getInstance());
+            SceneManager.getInstance().replaceLayer(AgentManager);
         }, _this);
-        var infoCallback = function (e) {
-            var foo = zHttp.getInstance().onHttpCompleted(e);
-            console.log('返回code:' + foo['code']);
-            switch (foo['code']) {
-                case 1:
-                    // 成功
-                    var result = foo['results'];
-                    UserObject.setBalance(result['balance']);
-                    _this.balanceText.$setText(UserObject.getBalance());
-                    console.log(UserObject);
-                    break;
-                case -1:
-                    // 账号或密码错误,单条message,没有results
-                    _this.addChild(Alert.show(foo['message']));
-                    break;
-                case -2:
-                    // 验证失败
-                    var result_2 = foo['results'];
-                    _this.addChild(Alert.show(result_2[0][0]));
-                    break;
-            }
-        };
-        zHttp.getInstance().sendHttpRequest(_this, "agent/info", egret.HttpMethod.POST, infoCallback);
+        _this.rightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            UserObject.userQuit();
+        }, _this);
+        UserObject.getUserInfo();
         return _this;
     }
+    LobbyScene.prototype.onEnter = function () {
+        UserObject.getUserInfo();
+    };
     LobbyScene.getInstance = function () {
         if (this.m_instance == null) {
             this.m_instance = new LobbyScene();
@@ -52,6 +36,9 @@ var LobbyScene = (function (_super) {
         return this.m_instance;
     };
     ;
+    LobbyScene.prototype.setBelence = function (_balance) {
+        this.balanceText.$setText(_balance);
+    };
     return LobbyScene;
 }(eui.Component));
 __reflect(LobbyScene.prototype, "LobbyScene");

@@ -4,7 +4,10 @@ class LobbyScene extends eui.Component {
 	private lobbyCreateAgentBtn: eui.Button;
 	private lobbyFinancialRecordBtn: eui.Button;
 	private lobbyAgentManagerBtn: eui.Button;
-	
+	private rightBtn: eui.Button;
+	public onEnter() {
+		UserObject.getUserInfo();
+	}
 	public static getInstance(): LobbyScene {
 		if (this.m_instance == null) {
 			this.m_instance = new LobbyScene();
@@ -15,45 +18,24 @@ class LobbyScene extends eui.Component {
 	public constructor() {
 		super();
 		this.skinName = "resource/skin/Scene/Lobby/LobbyScene.exml";
-		this.lobbyCreateAgentBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => { 
-			SceneManager.getInstance().replaceLayer(CreateAgent.getInstance());
+
+		this.lobbyCreateAgentBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			SceneManager.getInstance().replaceLayer(CreateAccount);
 		}, this);
-		this.lobbyFinancialRecordBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => { 
-			SceneManager.getInstance().replaceLayer(FinancialRecord.getInstance());
+		this.lobbyFinancialRecordBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			SceneManager.getInstance().replaceLayer(FinancialRecord);
 		}, this);
-		this.lobbyAgentManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => { 
-			SceneManager.getInstance().replaceLayer(AgentManager.getInstance());
+		this.lobbyAgentManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			SceneManager.getInstance().replaceLayer(AgentManager);
 		}, this);
 
+		this.rightBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			UserObject.userQuit();
+		}, this);
 
-		let infoCallback = (e: egret.Event) => {
-			let foo = zHttp.getInstance().onHttpCompleted(e);
-			console.log('返回code:' + foo['code']);
-			switch (foo['code']) {
-				case 1:
-					// 成功
-					let result = foo['results'];
-
-					UserObject.setBalance(result['balance']);
-					this.balanceText.$setText(UserObject.getBalance());
-					console.log(UserObject);
-
-					break;
-
-				case -1:
-					// 账号或密码错误,单条message,没有results
-					this.addChild(Alert.show(foo['message']));
-					break;
-
-				case -2:
-					// 验证失败
-					let result_2 = foo['results'];
-					this.addChild(Alert.show(result_2[0][0]));
-					break;
-			}
-		};
-		zHttp.getInstance().sendHttpRequest(this, "agent/info", egret.HttpMethod.POST, infoCallback);
-
-
+		UserObject.getUserInfo();
+	}
+	public setBelence(_balance) {
+		this.balanceText.$setText(_balance);
 	}
 }

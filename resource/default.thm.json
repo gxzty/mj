@@ -36,10 +36,13 @@
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
     "resource/skin/Misc/Alert/AlertSkin.exml",
+    "resource/skin/Misc/InputTips/InputTips.exml",
     "resource/skin/Misc/Title/Title.exml",
     "resource/skin/Scene/AgentManager/AgentManager.exml",
-    "resource/skin/Scene/CreateAgent/CreateAgent.exml",
+    "resource/skin/Scene/AgentManager/ChoseAccountToChargeItem.exml",
+    "resource/skin/Scene/CreateAccount/CreateAccount.exml",
     "resource/skin/Scene/FinancialRecord/FinancialRecord.exml",
+    "resource/skin/Scene/FinancialRecord/FinancialRecordItem.exml",
     "resource/skin/Scene/Lobby/LobbyScene.exml",
     "resource/skin/Scene/Login/LoginScene.exml"
   ]

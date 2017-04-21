@@ -20,29 +20,32 @@ var zHttp = (function () {
         console.log("create zHttp");
     };
     zHttp.prototype.sendHttpRequest = function (obj, url, _type, completeCallback, params, errorCallback, progressCallback) {
+        console.log(obj);
         var flag = false;
         if (params == null) {
             flag = true;
+            console.log("empty http");
             params = new eui.ArrayCollection();
-            params.addItem({ key: 'token', value: UserObject.getToken() });
+            params.addItem({ k: 'token', v: UserObject.getToken() });
             var time = String(new Date().getTime());
-            params.addItem({ key: 'timestamp', value: time });
-            params.addItem({ key: 'key', value: Encrypt.md5(Encrypt.md5("4B7D9717C34B2FB64CC813EA0ACC6D29" + time)) });
+            params.addItem({ k: 'timestamp', v: time });
+            params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5("4B7D9717C34B2FB64CC813EA0ACC6D29" + time)) });
         }
         var pUrl = "";
         if (params != null && params.length > 0) {
+            //console.log("params.length=", params.length);
             if (!flag) {
-                params.addItem({ key: 'token', value: UserObject.getToken() });
+                params.addItem({ k: 'token', v: UserObject.getToken() });
                 var time = String(new Date().getTime());
-                params.addItem({ key: 'timestamp', value: time });
-                params.addItem({ key: 'key', value: Encrypt.md5(Encrypt.md5("4B7D9717C34B2FB64CC813EA0ACC6D29" + time)) });
+                params.addItem({ k: 'timestamp', v: time });
+                params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5("4B7D9717C34B2FB64CC813EA0ACC6D29" + time)) });
             }
             pUrl = "?";
             for (var i = 0; i < params.length; i++) {
                 if (pUrl != "") {
                     pUrl = pUrl + "&";
                 }
-                pUrl = pUrl + params.getItemAt(i).key + "=" + params.getItemAt(i).value;
+                pUrl = pUrl + params.getItemAt(i).k + "=" + params.getItemAt(i).v;
             }
         }
         console.log("url:" + this.SERVER_ADDRESS + url + pUrl);
@@ -56,7 +59,7 @@ var zHttp = (function () {
         request.addEventListener(egret.ProgressEvent.PROGRESS, progressCallback ? progressCallback : this.onHttpProgress, obj);
     };
     zHttp.prototype.onHttpProgress = function (event) {
-        console.log("get progress : " + Math.floor(100 * event.bytesLoaded / event.bytesTotal) + "%");
+        //console.log("get progress : " + Math.floor(100 * event.bytesLoaded / event.bytesTotal) + "%");
     };
     zHttp.prototype.onHttpIOError = function (event) {
         console.log("HttpError");
@@ -68,7 +71,22 @@ var zHttp = (function () {
     zHttp.prototype.onHttpCompleted = function (event) {
         var _request = event.currentTarget;
         var _response = _request.response;
-        return JSON.parse(_response);
+        var foo = JSON.parse(_response);
+        //console.log('返回code:' + foo['code']);
+        switch (foo['code']) {
+            case 1:
+                return foo;
+            case -1:
+                // 账号或密码错误,单条message,没有results
+                Alert.show(foo['message']);
+                return undefined;
+            case -2:
+                // 验证失败
+                var result_2 = foo['results'];
+                Alert.show(result_2[0][0]);
+                return undefined;
+        }
+        return undefined;
     };
     return zHttp;
 }());

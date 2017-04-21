@@ -52,13 +52,19 @@ declare module skins{
 }
 declare class AlertSkin extends eui.Skin{
 }
+declare class InputTipsSkin extends eui.Skin{
+}
 declare class Title extends eui.Skin{
 }
 declare class AgentManagerSkin extends eui.Skin{
 }
+declare class ChoseAccountToChargeItem extends eui.Skin{
+}
 declare class CreateAgentSkin extends eui.Skin{
 }
 declare class AgentFinancialRecordSkin extends eui.Skin{
+}
+declare class FinancialRecordItemSkin extends eui.Skin{
 }
 declare class LobbySceneSkin extends eui.Skin{
 }

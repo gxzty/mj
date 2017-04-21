@@ -25,9 +25,13 @@ var SceneManager = (function (_super) {
     SceneManager.prototype.getRunningLayer = function () {
         return this.currentLayer;
     };
+    SceneManager.prototype.backToLobby = function () {
+        this.replaceLayer(LobbyScene);
+    };
     SceneManager.prototype.replaceLayer = function (_layer) {
         this.removeChild(this.currentLayer);
-        this.currentLayer = _layer;
+        this.currentLayer = _layer.getInstance();
+        this.checkLayerChange(_layer);
         this.addChild(this.currentLayer);
     };
     SceneManager.prototype.getWinSize = function () {
@@ -35,6 +39,9 @@ var SceneManager = (function (_super) {
     };
     SceneManager.prototype.getDirector = function () {
         return this.globalLayer;
+    };
+    SceneManager.prototype.checkLayerChange = function (_layer) {
+        _layer.getInstance().onEnter();
     };
     return SceneManager;
 }(eui.UILayer));

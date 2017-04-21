@@ -15,12 +15,14 @@ var Alert = (function (_super) {
         _this.anchorOffsetY = _this.height / 2;
         _this.$setX(SceneManager.getInstance().getWinSize().width / 2);
         _this.$setY(SceneManager.getInstance().getWinSize().height / 2);
-        Action.getInstance().TipsOpen(_this);
+        zAction.getInstance().TipsOpen(_this.alertGroup);
         _this.commitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
-            Action.getInstance().TipsClose(_this, (function (string) {
-                console.log(string);
+            zAction.getInstance().TipsClose(_this.alertGroup, (function () {
+                if (_this.callback) {
+                    _this.callback();
+                }
                 _this.parent.removeChild(_this);
-            }).bind(_this, 'adf'));
+            }).bind(_this));
         }, _this);
         return _this;
     }
@@ -30,6 +32,16 @@ var Alert = (function (_super) {
         if (_title) {
             _alert.titleDisplay.$setText(_title);
         }
+        SceneManager.getInstance().addChild(_alert);
+        return _alert;
+    };
+    Alert.showWithCallback = function (_context, _callback, _title) {
+        var _alert = new Alert();
+        _alert.alertContext.$setText(_context);
+        if (_title) {
+            _alert.titleDisplay.$setText(_title);
+        }
+        _alert.callback = _callback;
         SceneManager.getInstance().addChild(_alert);
         return _alert;
     };
