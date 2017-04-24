@@ -24,6 +24,11 @@ var Alert = (function (_super) {
                 _this.parent.removeChild(_this);
             }).bind(_this));
         }, _this);
+        _this.cancelBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, function (e) {
+            zAction.getInstance().TipsClose(_this.alertGroup, (function () {
+                _this.parent.removeChild(_this);
+            }).bind(_this));
+        }, _this);
         return _this;
     }
     Alert.show = function (_context, _title) {

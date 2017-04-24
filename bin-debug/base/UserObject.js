@@ -55,12 +55,15 @@ var UserObject = (function () {
         log('isAutoLogin');
     };
     UserObject.userQuit = function () {
-        this.Level = "";
-        this.Token = "";
-        this.FullName = "";
-        this.UserName = "";
-        this.Balance = "";
-        SceneManager.getInstance().replaceLayer(LoginScene);
+        var _this = this;
+        Alert.showWithCallback('您真的要退出登录吗?', function () {
+            _this.Level = "";
+            _this.Token = "";
+            _this.FullName = "";
+            _this.UserName = "";
+            _this.Balance = "";
+            SceneManager.getInstance().replaceLayer(LoginScene);
+        });
     };
     UserObject.getUserInfo = function () {
         var infoCallback = function (e) {
@@ -68,14 +71,19 @@ var UserObject = (function () {
             if (foo) {
                 var result = foo['results'];
                 UserObject.setBalance(result['balance']);
-                LobbyScene.getInstance().setBelence(UserObject.getBalance());
+                try {
+                    SceneManager.getInstance().getRunningLayer().setBelence(UserObject.getBalance());
+                }
+                catch (e) {
+                    console.log("切换场景过快!");
+                }
             }
         };
-        zHttp.getInstance().sendHttpRequest(this, "agent/info", egret.HttpMethod.POST, infoCallback);
+        zHttp.getInstance().sendHttpRequest(this, "account/detail", egret.HttpMethod.POST, infoCallback);
     };
     UserObject.getUsersAgentInfo = function () {
         //console.log("getUsersAgentInfo");
-        zHttp.getInstance().sendHttpRequest(this, "agent/listing", egret.HttpMethod.POST, function (e) {
+        zHttp.getInstance().sendHttpRequest(this, "account/listing", egret.HttpMethod.POST, function (e) {
             AgentManager.getInstance().resetGroupItems();
             var foo = zHttp.getInstance().onHttpCompleted(e);
             if (foo) {

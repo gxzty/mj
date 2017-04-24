@@ -2,11 +2,13 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
     p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
 };
 var zHttp = (function () {
+    // private SERVER_ADDRESS: string = 'http://192.168.1.211/mj_club/public/';
     //private SERVER_ADDRESS: string = 'http://121.43.191.130/agent/login';
     //private SERVER_ADDRESS: string = 'http://www.posttestserver.com/';
     //private SERVER_ADDRESS: string = 'http://httpbin.org/';
     function zHttp() {
-        this.SERVER_ADDRESS = 'http://192.168.1.211/mj_club/public/';
+        this.SERVER_ADDRESS = 'https://api.52plays.com/';
+        this.APP_SECERT = 'X7bmV6h7tYv(z,DZMP7zRxqIi*!Z!@4p';
         this.create();
     }
     zHttp.getInstance = function () {
@@ -29,7 +31,7 @@ var zHttp = (function () {
             params.addItem({ k: 'token', v: UserObject.getToken() });
             var time = String(new Date().getTime());
             params.addItem({ k: 'timestamp', v: time });
-            params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5("4B7D9717C34B2FB64CC813EA0ACC6D29" + time)) });
+            params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5(this.APP_SECERT + time)) });
         }
         var pUrl = "";
         if (params != null && params.length > 0) {
@@ -38,7 +40,7 @@ var zHttp = (function () {
                 params.addItem({ k: 'token', v: UserObject.getToken() });
                 var time = String(new Date().getTime());
                 params.addItem({ k: 'timestamp', v: time });
-                params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5("4B7D9717C34B2FB64CC813EA0ACC6D29" + time)) });
+                params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5(this.APP_SECERT + time)) });
             }
             pUrl = "?";
             for (var i = 0; i < params.length; i++) {

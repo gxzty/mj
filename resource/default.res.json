@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "default.res_json,default.thm_json,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,egret_icon_png,selected_png,border_png,header_png,thumb_pb_png,track_pb_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,track_sb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,description_json,ButtonSkin_exml,CheckBoxSkin_exml,HScrollBarSkin_exml,HSliderSkin_exml,ItemRendererSkin_exml,PanelSkin_exml,ProgressBarSkin_exml,RadioButtonSkin_exml,ScrollerSkin_exml,TextInputSkin_exml,ToggleSwitchSkin_exml,VScrollBarSkin_exml,VSliderSkin_exml,alert_bg_png,alert_commit_btn_png,AlertSkin_exml,cancel_btn_png,charge_input_bg_png,InputTips_exml,back_icon_png,exit_icon_png,Title_exml,agent_manager_item_bg_png,AgentManager_exml,charge_btn_png,ChoseAccountToChargeItem_exml,create_agent_btn_png,CreateAccount_exml,financial_record_bg_png,FinancialRecord_exml,lobby_agent_manager_png,lobby_create_agent_png,lobby_financial_record_png,lobby_title_png,LobbyScene_exml,login_btn_png,login_input_png,LoginScene_exml,logo_png",
+			"keys": "zUtils_ts,zHttp_ts,zAction_ts,tracklight_png,track_sb_png,track_png,track_pb_png,thumb_png,thumb_pb_png,selected_png,roundthumb_png,radiobutton_unselect_png,radiobutton_select_up_png,radiobutton_select_down_png,radiobutton_select_disabled_png,on_png,off_png,logo_png,login_input_png,login_btn_png,lobby_title_png,lobby_financial_record_png,lobby_create_agent_png,lobby_agent_manager_png,header_png,handle_png,financial_record_bg_png,exit_icon_png,egret_icon_png,description_json,default.thm_json,default.res_json,create_agent_btn_png,checkbox_unselect_png,checkbox_select_up_png,checkbox_select_down_png,checkbox_select_disabled_png,charge_input_bg_png,charge_btn_png,cancel_btn_png,button_up_png,button_down_png,border_png,back_icon_png,alert_commit_btn_png,alert_bg_png,agent_manager_item_bg_png,VSliderSkin_exml,VScrollBarSkin_exml,UserObject_ts,ToggleSwitchSkin_exml,Title_exml,ThemeAdapter_ts,TextInputSkin_exml,ScrollerSkin_exml,SceneManager_ts,RadioButtonSkin_exml,ProgressBarSkin_exml,PanelSkin_exml,Main_ts,MJManagerScene_ts,MJManagerScene_exml,LoginScene_ts,LoginScene_exml,Loding_ts,Loding_exml,LobbyScene_ts,LobbyScene_exml,LoadingUI_ts,ItemRendererSkin_exml,HSliderSkin_exml,HScrollBarSkin_exml,GroupManagerScene_ts,GroupManagerScene_exml,GlobalConfig_ts,FinancialRecord_ts,FinancialRecord_exml,FinancialRecordItem_ts,FinancialRecordItem_exml,Encrypt_ts,CreateAccount_ts,CreateAccount_exml,ChoseAccountToChargeItem_exml,CheckBoxSkin_exml,ChargeForAgent_ts,ChargeForAgentTips_exml,ButtonSkin_exml,AssetAdapter_ts,Alert_ts,AlertSkin_exml,AgentManager_ts,AgentManager_exml,AgentItem_ts",
 			"name": "preload"
 		}
 	],
@@ -192,29 +192,19 @@
 			"name": "on_png"
 		},
 		{
-			"url": "skin/Misc/InputTips/InputTips.exml",
-			"type": "bin",
-			"name": "InputTips_exml"
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
 		},
 		{
-			"url": "skin/Misc/InputTips/charge_input_bg.png",
-			"type": "image",
-			"name": "charge_input_bg_png"
+			"url": "default.thm.json",
+			"type": "json",
+			"name": "default.thm_json"
 		},
 		{
-			"url": "skin/Misc/Title/Title.exml",
-			"type": "bin",
-			"name": "Title_exml"
-		},
-		{
-			"url": "skin/Misc/Title/back_icon.png",
-			"type": "image",
-			"name": "back_icon_png"
-		},
-		{
-			"url": "skin/Misc/Title/exit_icon.png",
-			"type": "image",
-			"name": "exit_icon_png"
+			"url": "default.res.json",
+			"type": "json",
+			"name": "default.res_json"
 		},
 		{
 			"url": "skin/Misc/Alert/AlertSkin.exml",
@@ -237,69 +227,39 @@
 			"name": "cancel_btn_png"
 		},
 		{
-			"url": "skin/Scene/CreateAccount/CreateAccount.exml",
+			"url": "skin/Misc/ChargeForAgentTips/ChargeForAgentTips.exml",
 			"type": "bin",
-			"name": "CreateAccount_exml"
+			"name": "ChargeForAgentTips_exml"
 		},
 		{
-			"url": "skin/Scene/CreateAccount/create_agent_btn.png",
+			"url": "skin/Misc/ChargeForAgentTips/charge_input_bg.png",
 			"type": "image",
-			"name": "create_agent_btn_png"
+			"name": "charge_input_bg_png"
 		},
 		{
-			"url": "skin/Scene/FinancialRecord/FinancialRecord.exml",
+			"url": "skin/Misc/Loding/Loding.exml",
 			"type": "bin",
-			"name": "FinancialRecord_exml"
+			"name": "Loding_exml"
 		},
 		{
-			"url": "skin/Scene/FinancialRecord/financial_record_bg.png",
-			"type": "image",
-			"name": "financial_record_bg_png"
-		},
-		{
-			"url": "skin/Scene/AgentManager/AgentManager.exml",
+			"url": "skin/Misc/Loding/Loding.ts",
 			"type": "bin",
-			"name": "AgentManager_exml"
+			"name": "Loding_ts"
 		},
 		{
-			"url": "skin/Scene/AgentManager/ChoseAccountToChargeItem.exml",
+			"url": "skin/Misc/Title/Title.exml",
 			"type": "bin",
-			"name": "ChoseAccountToChargeItem_exml"
+			"name": "Title_exml"
 		},
 		{
-			"url": "skin/Scene/AgentManager/agent_manager_item_bg.png",
+			"url": "skin/Misc/Title/back_icon.png",
 			"type": "image",
-			"name": "agent_manager_item_bg_png"
+			"name": "back_icon_png"
 		},
 		{
-			"url": "skin/Scene/AgentManager/charge_btn.png",
+			"url": "skin/Misc/Title/exit_icon.png",
 			"type": "image",
-			"name": "charge_btn_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/LobbyScene.exml",
-			"type": "bin",
-			"name": "LobbyScene_exml"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_agent_manager.png",
-			"type": "image",
-			"name": "lobby_agent_manager_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_create_agent.png",
-			"type": "image",
-			"name": "lobby_create_agent_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_financial_record.png",
-			"type": "image",
-			"name": "lobby_financial_record_png"
-		},
-		{
-			"url": "skin/Scene/Lobby/lobby_title.png",
-			"type": "image",
-			"name": "lobby_title_png"
+			"name": "exit_icon_png"
 		},
 		{
 			"url": "skin/Scene/Login/LoginScene.exml",
@@ -322,19 +282,194 @@
 			"name": "logo_png"
 		},
 		{
-			"url": "config/description.json",
-			"type": "json",
-			"name": "description_json"
+			"url": "skin/Scene/Agent/AgentManager/AgentManager.exml",
+			"type": "bin",
+			"name": "AgentManager_exml"
 		},
 		{
-			"url": "default.thm.json",
-			"type": "json",
-			"name": "default.thm_json"
+			"url": "skin/Scene/Agent/AgentManager/ChoseAccountToChargeItem.exml",
+			"type": "bin",
+			"name": "ChoseAccountToChargeItem_exml"
 		},
 		{
-			"url": "default.res.json",
-			"type": "json",
-			"name": "default.res_json"
+			"url": "skin/Scene/Agent/AgentManager/agent_manager_item_bg.png",
+			"type": "image",
+			"name": "agent_manager_item_bg_png"
+		},
+		{
+			"url": "skin/Scene/Agent/AgentManager/charge_btn.png",
+			"type": "image",
+			"name": "charge_btn_png"
+		},
+		{
+			"url": "skin/Scene/Agent/CreateAccount/CreateAccount.exml",
+			"type": "bin",
+			"name": "CreateAccount_exml"
+		},
+		{
+			"url": "skin/Scene/Agent/CreateAccount/create_agent_btn.png",
+			"type": "image",
+			"name": "create_agent_btn_png"
+		},
+		{
+			"url": "skin/Scene/Agent/FinancialRecord/FinancialRecord.exml",
+			"type": "bin",
+			"name": "FinancialRecord_exml"
+		},
+		{
+			"url": "skin/Scene/Agent/FinancialRecord/FinancialRecordItem.exml",
+			"type": "bin",
+			"name": "FinancialRecordItem_exml"
+		},
+		{
+			"url": "skin/Scene/Agent/FinancialRecord/financial_record_bg.png",
+			"type": "image",
+			"name": "financial_record_bg_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/LobbyScene.exml",
+			"type": "bin",
+			"name": "LobbyScene_exml"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_agent_manager.png",
+			"type": "image",
+			"name": "lobby_agent_manager_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_create_agent.png",
+			"type": "image",
+			"name": "lobby_create_agent_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_financial_record.png",
+			"type": "image",
+			"name": "lobby_financial_record_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_title.png",
+			"type": "image",
+			"name": "lobby_title_png"
+		},
+		{
+			"url": "skin/Scene/Group/GroupManagerScene/GroupManagerScene.exml",
+			"type": "bin",
+			"name": "GroupManagerScene_exml"
+		},
+		{
+			"url": "skin/Scene/Group/MJManagerScene/MJManagerScene.exml",
+			"type": "bin",
+			"name": "MJManagerScene_exml"
+		},
+		{
+			"url": "assets/AssetAdapter.ts",
+			"type": "bin",
+			"name": "AssetAdapter_ts"
+		},
+		{
+			"url": "assets/LoadingUI.ts",
+			"type": "bin",
+			"name": "LoadingUI_ts"
+		},
+		{
+			"url": "assets/Main.ts",
+			"type": "bin",
+			"name": "Main_ts"
+		},
+		{
+			"url": "assets/ThemeAdapter.ts",
+			"type": "bin",
+			"name": "ThemeAdapter_ts"
+		},
+		{
+			"url": "assets/Alert.ts",
+			"type": "bin",
+			"name": "Alert_ts"
+		},
+		{
+			"url": "assets/ChargeForAgent.ts",
+			"type": "bin",
+			"name": "ChargeForAgent_ts"
+		},
+		{
+			"url": "assets/LoginScene.ts",
+			"type": "bin",
+			"name": "LoginScene_ts"
+		},
+		{
+			"url": "assets/SceneManager.ts",
+			"type": "bin",
+			"name": "SceneManager_ts"
+		},
+		{
+			"url": "assets/Encrypt.ts",
+			"type": "bin",
+			"name": "Encrypt_ts"
+		},
+		{
+			"url": "assets/GlobalConfig.ts",
+			"type": "bin",
+			"name": "GlobalConfig_ts"
+		},
+		{
+			"url": "assets/UserObject.ts",
+			"type": "bin",
+			"name": "UserObject_ts"
+		},
+		{
+			"url": "assets/zAction.ts",
+			"type": "bin",
+			"name": "zAction_ts"
+		},
+		{
+			"url": "assets/zHttp.ts",
+			"type": "bin",
+			"name": "zHttp_ts"
+		},
+		{
+			"url": "assets/zUtils.ts",
+			"type": "bin",
+			"name": "zUtils_ts"
+		},
+		{
+			"url": "assets/GroupManagerScene.ts",
+			"type": "bin",
+			"name": "GroupManagerScene_ts"
+		},
+		{
+			"url": "assets/CreateAccount.ts",
+			"type": "bin",
+			"name": "CreateAccount_ts"
+		},
+		{
+			"url": "assets/LobbyScene.ts",
+			"type": "bin",
+			"name": "LobbyScene_ts"
+		},
+		{
+			"url": "assets/AgentItem.ts",
+			"type": "bin",
+			"name": "AgentItem_ts"
+		},
+		{
+			"url": "assets/AgentManager.ts",
+			"type": "bin",
+			"name": "AgentManager_ts"
+		},
+		{
+			"url": "assets/FinancialRecord.ts",
+			"type": "bin",
+			"name": "FinancialRecord_ts"
+		},
+		{
+			"url": "assets/FinancialRecordItem.ts",
+			"type": "bin",
+			"name": "FinancialRecordItem_ts"
+		},
+		{
+			"url": "assets/MJManagerScene.ts",
+			"type": "bin",
+			"name": "MJManagerScene_ts"
 		}
 	]
 }

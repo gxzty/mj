@@ -26,7 +26,12 @@ var SceneManager = (function (_super) {
         return this.currentLayer;
     };
     SceneManager.prototype.backToLobby = function () {
-        this.replaceLayer(LobbyScene);
+        if (GlobalConfig.getIsGroup()) {
+            this.replaceLayer(GroupManagerScene);
+        }
+        else {
+            this.replaceLayer(LobbyScene);
+        }
     };
     SceneManager.prototype.replaceLayer = function (_layer) {
         this.removeChild(this.currentLayer);

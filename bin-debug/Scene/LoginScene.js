@@ -10,7 +10,6 @@ var LoginScene = (function (_super) {
     __extends(LoginScene, _super);
     function LoginScene() {
         var _this = _super.call(this) || this;
-        _this.x = 0;
         _this.skinName = "resource/skin/Scene/Login/LoginScene.exml";
         zUtils.initInput(_this.phoneNumber, "手机号码");
         zUtils.initInput(_this.password, "输入密码");
@@ -32,11 +31,16 @@ var LoginScene = (function (_super) {
                     UserObject.setToken(result['token']);
                     UserObject.setLevel(result['level']);
                     //console.log(UserObject);
-                    Alert.showWithCallback(foo['message'], function () { SceneManager.getInstance().backToLobby(); });
+                    GlobalConfig.setIsGroup(false); // 默认是代理
+                    if (UserObject.getLevel() > 2) {
+                        // level大于2(>=3),即为群主,设置为群主
+                        GlobalConfig.setIsGroup(true);
+                    }
+                    SceneManager.getInstance().backToLobby();
                 }
             };
             var request = new egret.HttpRequest();
-            request.open("http://192.168.1.211/mj_club/public/agent/login", egret.HttpMethod.POST);
+            request.open("https://api.52plays.com/login", egret.HttpMethod.POST);
             request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             request.send(loginInfo);
             request.addEventListener(egret.Event.COMPLETE, onCompleted, _this);
@@ -72,16 +76,16 @@ var LoginScene = (function (_super) {
     };
     ;
     LoginScene.prototype.getLocalInfo = function () {
-        var _this = this;
-        this.x++;
         var log = function (p) {
-            console.log("times:" + String(_this.x) + p + ':' + egret.localStorage.getItem(p));
+            console.log(p + ':' + egret.localStorage.getItem(p));
         };
         log('username');
         log('password');
         log('isRememberPass');
         log('isAutoLogin');
-        this.phoneNumber.text = egret.localStorage.getItem('username');
+        if (egret.localStorage.getItem('username') != 'null' && egret.localStorage.getItem('username') != 'undefined') {
+            this.phoneNumber.text = egret.localStorage.getItem('username');
+        }
         if (egret.localStorage.getItem('isRememberPass') == '1') {
             this.rememberPassCheckBox.$setSelected(true);
             this.password.text = egret.localStorage.getItem('password');
@@ -90,9 +94,6 @@ var LoginScene = (function (_super) {
             this.autoLoginCheckBox.$setSelected(true);
             this.rememberPassCheckBox.$setSelected(true);
         }
-        // }
-        // console.log(this.phoneNumber.text + '/' + this.password.text + '/' + String(LoginScene.getInstance().rememberPassCheckBox.$selected) + '/' + String(LoginScene.getInstance().autoLoginCheckBox.$selected));
-        // return;
     };
     LoginScene.prototype.resetInput = function () {
         zUtils.reSetInputText(this.phoneNumber);
