@@ -1,16 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "zUtils_ts,zHttp_ts,zAction_ts,tracklight_png,track_sb_png,track_png,track_pb_png,thumb_png,thumb_pb_png,selected_png,roundthumb_png,radiobutton_unselect_png,radiobutton_select_up_png,radiobutton_select_down_png,radiobutton_select_disabled_png,on_png,off_png,logo_png,login_input_png,login_btn_png,lobby_title_png,lobby_financial_record_png,lobby_create_agent_png,lobby_agent_manager_png,header_png,handle_png,financial_record_bg_png,exit_icon_png,egret_icon_png,description_json,default.thm_json,default.res_json,create_agent_btn_png,checkbox_unselect_png,checkbox_select_up_png,checkbox_select_down_png,checkbox_select_disabled_png,charge_input_bg_png,charge_btn_png,cancel_btn_png,button_up_png,button_down_png,border_png,back_icon_png,alert_commit_btn_png,alert_bg_png,agent_manager_item_bg_png,VSliderSkin_exml,VScrollBarSkin_exml,UserObject_ts,ToggleSwitchSkin_exml,Title_exml,ThemeAdapter_ts,TextInputSkin_exml,ScrollerSkin_exml,SceneManager_ts,RadioButtonSkin_exml,ProgressBarSkin_exml,PanelSkin_exml,Main_ts,MJManagerScene_ts,MJManagerScene_exml,LoginScene_ts,LoginScene_exml,Loding_ts,Loding_exml,LobbyScene_ts,LobbyScene_exml,LoadingUI_ts,ItemRendererSkin_exml,HSliderSkin_exml,HScrollBarSkin_exml,GroupManagerScene_ts,GroupManagerScene_exml,GlobalConfig_ts,FinancialRecord_ts,FinancialRecord_exml,FinancialRecordItem_ts,FinancialRecordItem_exml,Encrypt_ts,CreateAccount_ts,CreateAccount_exml,ChoseAccountToChargeItem_exml,CheckBoxSkin_exml,ChargeForAgent_ts,ChargeForAgentTips_exml,ButtonSkin_exml,AssetAdapter_ts,Alert_ts,AlertSkin_exml,AgentManager_ts,AgentManager_exml,AgentItem_ts",
+			"keys": "logo_png,login_input_png,login_btn_png,lobby_title_png,lobby_financial_record_png,lobby_create_agent_png,lobby_agent_manager_png,financial_record_bg_png,exit_icon_png,description_json,default.thm_json,default.res_json,create_agent_btn_png,charge_input_bg_png,charge_btn_png,cancel_btn_png,back_icon_png,alert_commit_btn_png,alert_bg_png,agent_manager_item_bg_png,VSliderSkin_exml,VScrollBarSkin_exml,ToggleSwitchSkin_exml,Title_exml,TextInputSkin_exml,ScrollerSkin_exml,RadioButtonSkin_exml,ProgressBarSkin_exml,PanelSkin_exml,MJManagerScene_exml,LoginScene_exml,Loding_ts,Loding_exml,LobbyScene_exml,ItemRendererSkin_exml,HSliderSkin_exml,HScrollBarSkin_exml,GroupManagerScene_exml,FinancialRecord_exml,FinancialRecordItem_exml,CreateAccount_exml,ChoseAccountToChargeItem_exml,CheckBoxSkin_exml,ChargeForAgentTips_exml,ButtonSkin_exml,AlertSkin_exml,AgentManager_exml,description2_json,alert_bg2_png,alert_commit_btn2_png,cancel_btn2_png,charge_input_bg2_png,back_icon2_png,exit_icon2_png,agent_manager_item_bg2_png,charge_btn2_png,create_agent_btn2_png,financial_record_bg2_png,lobby_agent_manager2_png,lobby_create_agent2_png,lobby_financial_record2_png,lobby_title2_png,login_btn2_png,login_input2_png,logo2_png,AgentItem_ts,AgentManager_ts,Alert_ts,AssetAdapter_ts,button_down_png,button_up_png,ChargeForAgent_ts,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,CreateAccount_ts,egret_icon_png,egret.d_ts,egret_js,egret.min_js,egret.native_js,egret.native.min_js,egret.web_js,egret.web.min_js,Encrypt_ts,eui.d_ts,eui_js,eui.min_js,exml.e.d_ts,FinancialRecord_ts,FinancialRecordItem_ts,GlobalConfig_ts,GroupManagerScene_ts,selected_png,LoadingUI_ts,LobbyScene_ts,LoginScene_ts,Main_ts,md5-min.d_json,md5-min.d_ts,md5-min_js,md5-min_json,MJManagerScene_ts,border_png,header_png,thumb_pb_png,track_pb_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,res.d_ts,res_js,res.min_js,SceneManager_ts,roundthumb_png,track_sb_png,thumb_png,track_png,tracklight_png,ThemeAdapter_ts,handle_png,off_png,on_png,tween.d_ts,tween_js,tween.min_js,UserObject_ts,zAction_ts,zHttp_ts,zUtils_ts",
 			"name": "preload"
 		}
 	],
 	"resources": [
-		{
-			"url": "assets/egret_icon.png",
-			"type": "image",
-			"name": "egret_icon_png"
-		},
 		{
 			"url": "eui_skins/ButtonSkin.exml",
 			"type": "bin",
@@ -75,121 +70,6 @@
 			"url": "eui_skins/VSliderSkin.exml",
 			"type": "bin",
 			"name": "VSliderSkin_exml"
-		},
-		{
-			"url": "assets/CheckBox/checkbox_select_disabled.png",
-			"type": "image",
-			"name": "checkbox_select_disabled_png"
-		},
-		{
-			"url": "assets/CheckBox/checkbox_select_down.png",
-			"type": "image",
-			"name": "checkbox_select_down_png"
-		},
-		{
-			"url": "assets/CheckBox/checkbox_select_up.png",
-			"type": "image",
-			"name": "checkbox_select_up_png"
-		},
-		{
-			"url": "assets/CheckBox/checkbox_unselect.png",
-			"type": "image",
-			"name": "checkbox_unselect_png"
-		},
-		{
-			"url": "assets/Button/button_down.png",
-			"type": "image",
-			"name": "button_down_png"
-		},
-		{
-			"url": "assets/Button/button_up.png",
-			"type": "image",
-			"name": "button_up_png"
-		},
-		{
-			"url": "assets/ItemRenderer/selected.png",
-			"type": "image",
-			"name": "selected_png"
-		},
-		{
-			"url": "assets/Panel/border.png",
-			"type": "image",
-			"name": "border_png"
-		},
-		{
-			"url": "assets/Panel/header.png",
-			"type": "image",
-			"name": "header_png"
-		},
-		{
-			"url": "assets/ProgressBar/thumb_pb.png",
-			"type": "image",
-			"name": "thumb_pb_png"
-		},
-		{
-			"url": "assets/ProgressBar/track_pb.png",
-			"type": "image",
-			"name": "track_pb_png"
-		},
-		{
-			"url": "assets/ScrollBar/roundthumb.png",
-			"type": "image",
-			"name": "roundthumb_png"
-		},
-		{
-			"url": "assets/ScrollBar/track_sb.png",
-			"type": "image",
-			"name": "track_sb_png"
-		},
-		{
-			"url": "assets/Slider/thumb.png",
-			"type": "image",
-			"name": "thumb_png"
-		},
-		{
-			"url": "assets/Slider/track.png",
-			"type": "image",
-			"name": "track_png"
-		},
-		{
-			"url": "assets/Slider/tracklight.png",
-			"type": "image",
-			"name": "tracklight_png"
-		},
-		{
-			"url": "assets/RadioButton/radiobutton_select_disabled.png",
-			"type": "image",
-			"name": "radiobutton_select_disabled_png"
-		},
-		{
-			"url": "assets/RadioButton/radiobutton_select_down.png",
-			"type": "image",
-			"name": "radiobutton_select_down_png"
-		},
-		{
-			"url": "assets/RadioButton/radiobutton_select_up.png",
-			"type": "image",
-			"name": "radiobutton_select_up_png"
-		},
-		{
-			"url": "assets/RadioButton/radiobutton_unselect.png",
-			"type": "image",
-			"name": "radiobutton_unselect_png"
-		},
-		{
-			"url": "assets/ToggleSwitch/handle.png",
-			"type": "image",
-			"name": "handle_png"
-		},
-		{
-			"url": "assets/ToggleSwitch/off.png",
-			"type": "image",
-			"name": "off_png"
-		},
-		{
-			"url": "assets/ToggleSwitch/on.png",
-			"type": "image",
-			"name": "on_png"
 		},
 		{
 			"url": "config/description.json",
@@ -362,6 +242,96 @@
 			"name": "MJManagerScene_exml"
 		},
 		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description2_json"
+		},
+		{
+			"url": "skin/Misc/Alert/alert_bg.png",
+			"type": "image",
+			"name": "alert_bg2_png"
+		},
+		{
+			"url": "skin/Misc/Alert/alert_commit_btn.png",
+			"type": "image",
+			"name": "alert_commit_btn2_png"
+		},
+		{
+			"url": "skin/Misc/Alert/cancel_btn.png",
+			"type": "image",
+			"name": "cancel_btn2_png"
+		},
+		{
+			"url": "skin/Misc/ChargeForAgentTips/charge_input_bg.png",
+			"type": "image",
+			"name": "charge_input_bg2_png"
+		},
+		{
+			"url": "skin/Misc/Title/back_icon.png",
+			"type": "image",
+			"name": "back_icon2_png"
+		},
+		{
+			"url": "skin/Misc/Title/exit_icon.png",
+			"type": "image",
+			"name": "exit_icon2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/AgentManager/agent_manager_item_bg.png",
+			"type": "image",
+			"name": "agent_manager_item_bg2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/AgentManager/charge_btn.png",
+			"type": "image",
+			"name": "charge_btn2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/CreateAccount/create_agent_btn.png",
+			"type": "image",
+			"name": "create_agent_btn2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/FinancialRecord/financial_record_bg.png",
+			"type": "image",
+			"name": "financial_record_bg2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_agent_manager.png",
+			"type": "image",
+			"name": "lobby_agent_manager2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_create_agent.png",
+			"type": "image",
+			"name": "lobby_create_agent2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_financial_record.png",
+			"type": "image",
+			"name": "lobby_financial_record2_png"
+		},
+		{
+			"url": "skin/Scene/Agent/Lobby/lobby_title.png",
+			"type": "image",
+			"name": "lobby_title2_png"
+		},
+		{
+			"url": "skin/Scene/Login/login_btn.png",
+			"type": "image",
+			"name": "login_btn2_png"
+		},
+		{
+			"url": "skin/Scene/Login/login_input.png",
+			"type": "image",
+			"name": "login_input2_png"
+		},
+		{
+			"url": "skin/Scene/Login/logo.png",
+			"type": "image",
+			"name": "logo2_png"
+		},
+		{
 			"url": "assets/AssetAdapter.ts",
 			"type": "bin",
 			"name": "AssetAdapter_ts"
@@ -432,11 +402,6 @@
 			"name": "zUtils_ts"
 		},
 		{
-			"url": "assets/GroupManagerScene.ts",
-			"type": "bin",
-			"name": "GroupManagerScene_ts"
-		},
-		{
 			"url": "assets/CreateAccount.ts",
 			"type": "bin",
 			"name": "CreateAccount_ts"
@@ -447,14 +412,9 @@
 			"name": "LobbyScene_ts"
 		},
 		{
-			"url": "assets/AgentItem.ts",
+			"url": "assets/GroupManagerScene.ts",
 			"type": "bin",
-			"name": "AgentItem_ts"
-		},
-		{
-			"url": "assets/AgentManager.ts",
-			"type": "bin",
-			"name": "AgentManager_ts"
+			"name": "GroupManagerScene_ts"
 		},
 		{
 			"url": "assets/FinancialRecord.ts",
@@ -470,6 +430,241 @@
 			"url": "assets/MJManagerScene.ts",
 			"type": "bin",
 			"name": "MJManagerScene_ts"
+		},
+		{
+			"url": "assets/AgentItem.ts",
+			"type": "bin",
+			"name": "AgentItem_ts"
+		},
+		{
+			"url": "assets/AgentManager.ts",
+			"type": "bin",
+			"name": "AgentManager_ts"
+		},
+		{
+			"url": "assets/egret.d.ts",
+			"type": "bin",
+			"name": "egret.d_ts"
+		},
+		{
+			"url": "assets/egret.js",
+			"type": "bin",
+			"name": "egret_js"
+		},
+		{
+			"url": "assets/egret.min.js",
+			"type": "bin",
+			"name": "egret.min_js"
+		},
+		{
+			"url": "assets/egret.native.js",
+			"type": "bin",
+			"name": "egret.native_js"
+		},
+		{
+			"url": "assets/egret.native.min.js",
+			"type": "bin",
+			"name": "egret.native.min_js"
+		},
+		{
+			"url": "assets/egret.web.js",
+			"type": "bin",
+			"name": "egret.web_js"
+		},
+		{
+			"url": "assets/egret.web.min.js",
+			"type": "bin",
+			"name": "egret.web.min_js"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "assets/eui.d.ts",
+			"type": "bin",
+			"name": "eui.d_ts"
+		},
+		{
+			"url": "assets/eui.js",
+			"type": "bin",
+			"name": "eui_js"
+		},
+		{
+			"url": "assets/eui.min.js",
+			"type": "bin",
+			"name": "eui.min_js"
+		},
+		{
+			"url": "assets/exml.e.d.ts",
+			"type": "bin",
+			"name": "exml.e.d_ts"
+		},
+		{
+			"url": "assets/md5-min.d.ts",
+			"type": "bin",
+			"name": "md5-min.d_ts"
+		},
+		{
+			"url": "assets/md5-min.js",
+			"type": "bin",
+			"name": "md5-min_js"
+		},
+		{
+			"url": "assets/res.d.ts",
+			"type": "bin",
+			"name": "res.d_ts"
+		},
+		{
+			"url": "assets/res.js",
+			"type": "bin",
+			"name": "res_js"
+		},
+		{
+			"url": "assets/res.min.js",
+			"type": "bin",
+			"name": "res.min_js"
+		},
+		{
+			"url": "assets/tween.d.ts",
+			"type": "bin",
+			"name": "tween.d_ts"
+		},
+		{
+			"url": "assets/tween.js",
+			"type": "bin",
+			"name": "tween_js"
+		},
+		{
+			"url": "assets/tween.min.js",
+			"type": "bin",
+			"name": "tween.min_js"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_disabled.png",
+			"type": "image",
+			"name": "checkbox_select_disabled_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_down.png",
+			"type": "image",
+			"name": "checkbox_select_down_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_select_up.png",
+			"type": "image",
+			"name": "checkbox_select_up_png"
+		},
+		{
+			"url": "assets/CheckBox/checkbox_unselect.png",
+			"type": "image",
+			"name": "checkbox_unselect_png"
+		},
+		{
+			"url": "assets/ItemRenderer/selected.png",
+			"type": "image",
+			"name": "selected_png"
+		},
+		{
+			"url": "assets/Panel/border.png",
+			"type": "image",
+			"name": "border_png"
+		},
+		{
+			"url": "assets/Panel/header.png",
+			"type": "image",
+			"name": "header_png"
+		},
+		{
+			"url": "assets/Button/button_down.png",
+			"type": "image",
+			"name": "button_down_png"
+		},
+		{
+			"url": "assets/Button/button_up.png",
+			"type": "image",
+			"name": "button_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_disabled.png",
+			"type": "image",
+			"name": "radiobutton_select_disabled_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_down.png",
+			"type": "image",
+			"name": "radiobutton_select_down_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_select_up.png",
+			"type": "image",
+			"name": "radiobutton_select_up_png"
+		},
+		{
+			"url": "assets/RadioButton/radiobutton_unselect.png",
+			"type": "image",
+			"name": "radiobutton_unselect_png"
+		},
+		{
+			"url": "assets/ProgressBar/thumb_pb.png",
+			"type": "image",
+			"name": "thumb_pb_png"
+		},
+		{
+			"url": "assets/ProgressBar/track_pb.png",
+			"type": "image",
+			"name": "track_pb_png"
+		},
+		{
+			"url": "assets/ScrollBar/roundthumb.png",
+			"type": "image",
+			"name": "roundthumb_png"
+		},
+		{
+			"url": "assets/ScrollBar/track_sb.png",
+			"type": "image",
+			"name": "track_sb_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/handle.png",
+			"type": "image",
+			"name": "handle_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/off.png",
+			"type": "image",
+			"name": "off_png"
+		},
+		{
+			"url": "assets/ToggleSwitch/on.png",
+			"type": "image",
+			"name": "on_png"
+		},
+		{
+			"url": "assets/Slider/thumb.png",
+			"type": "image",
+			"name": "thumb_png"
+		},
+		{
+			"url": "assets/Slider/track.png",
+			"type": "image",
+			"name": "track_png"
+		},
+		{
+			"url": "assets/Slider/tracklight.png",
+			"type": "image",
+			"name": "tracklight_png"
+		},
+		{
+			"url": "assets/md5-min.d.json",
+			"type": "json",
+			"name": "md5-min.d_json"
+		},
+		{
+			"url": "assets/md5-min.json",
+			"type": "json",
+			"name": "md5-min_json"
 		}
 	]
 }
