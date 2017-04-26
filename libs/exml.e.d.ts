@@ -70,6 +70,8 @@ declare class FinancialRecordItemSkin extends eui.Skin{
 }
 declare class LobbySceneSkin extends eui.Skin{
 }
+declare class CreateClubSceneSkin extends eui.Skin{
+}
 declare class GroupManagerSceneSkin extends eui.Skin{
 }
 declare class MJManagerSceneSkin extends eui.Skin{

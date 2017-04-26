@@ -21,7 +21,8 @@
     "AgentFinancialRecord": "resource/skin/Scene/AgentFinancialRecord/{className}.exml",
     "GroupManagerScene": "resource/skin/Group/GroupManagerScene/GroupManagerScene.exml",
     "MJManagerScene": "resource/skin/Group/MJManagerScene/MJManagerScene.exml",
-    "Loding": "resource/skin/Misc/Loding/Loding.exml"
+    "Loding": "resource/skin/Misc/Loding/Loding.exml",
+    "CreatClub": "resource/eui_skins/CreatClub.exml"
   },
   "autoGenerateExmlsList": true,
   "exmls": [
@@ -48,6 +49,7 @@
     "resource/skin/Scene/Agent/FinancialRecord/FinancialRecord.exml",
     "resource/skin/Scene/Agent/FinancialRecord/FinancialRecordItem.exml",
     "resource/skin/Scene/Agent/Lobby/LobbyScene.exml",
+    "resource/skin/Scene/Group/CreateClubScene/CreateClubScene.exml",
     "resource/skin/Scene/Group/GroupManagerScene/GroupManagerScene.exml",
     "resource/skin/Scene/Group/MJManagerScene/MJManagerScene.exml",
     "resource/skin/Scene/Login/LoginScene.exml"

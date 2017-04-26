@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CreateClubSceneSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<w:Config id="15b862d4cff"></w:Config>
+	<e:Rect x="0" y="96" width="720" height="1184" fillColor="0xf5f5f5" anchorOffsetY="0" />
+	<e:Group width="720" height="96" x="0" anchorOffsetX="0" anchorOffsetY="0" id="title">
+		<e:Rect width="720" height="96" x="0" y="0" scaleX="1" scaleY="1" fillColor="0xFF772E" />
+		<e:Button id="leftBtn" label="" scaleX="1" scaleY="1" x="0" y="1" anchorOffsetY="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="back_icon_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="360" y="48" anchorOffsetY="15" size="32"
+		         anchorOffsetX="128" />
+		<e:Button id="rightBtn" label="" x="626.5" y="1" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="exit_icon_png" />
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+	<e:Label text="俱乐部名称" x="30" y="137.79" textColor="0x000000" size="33" fontFamily="Arial" />
+	<e:Label text="俱乐部公告" x="30" y="282.64" textColor="0x000000" size="33" fontFamily="Arial" />
+	<e:Image x="30" y="337.51" source="club_annoc_bg_png" />
+	<e:Image x="30" y="192.96" source="club_annoc_bg_png" anchorOffsetY="0" height="55.12" />
+	<e:TextInput id="clubNameInput" width="642.73" height="59.83" anchorOffsetX="0" anchorOffsetY="0" x="29.27" y="192.96" />
+	<e:TextInput id="clubAnnocInput" width="642.73" height="440.13" anchorOffsetX="0" anchorOffsetY="0" top="340" left="31" />
+	<e:Button id="createClubBtn" label="" x="67.64" y="910.82">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="create_club_btn_png" />
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

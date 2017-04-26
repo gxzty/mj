@@ -1,31 +1,36 @@
 {
-    "15b8578e5c1": {
-        "path": "Login.ts",
-        "class": "Login",
-        "parentPath": "resource/eui_skins/PanelSkin.exml"
-    },
-    "global": {
-        "globalAutoLayerMarkEnable": true,
-        "globalAdsorbEnable": true
-    },
-    "15b8bd9e9cf": {
-        "path": "Scene\\CreateAgent.ts",
-        "class": "CreateAgent",
-        "parentPath": ""
-    },
-    "15b8c0df45c": {
-        "path": "Scene\\AgentFinancialRecord.ts",
-        "class": "AgentFinancialRecord",
-        "parentPath": ""
-    },
-    "15b8c13b2c5": {
-        "path": "Scene\\AgentManager.ts",
-        "class": "AgentManager",
-        "parentPath": ""
-    },
-    "15b9df6bb96": {
-        "path": "..\\resource\\skin\\Misc\\Loding\\Loding.ts",
-        "class": "Loding",
-        "parentPath": ""
-    }
+  "15b8578e5c1": {
+    "path": "Login.ts",
+    "class": "Login",
+    "parentPath": "resource/eui_skins/PanelSkin.exml"
+  },
+  "global": {
+    "globalAutoLayerMarkEnable": true,
+    "globalAdsorbEnable": true
+  },
+  "15b8bd9e9cf": {
+    "path": "Scene\\CreateAgent.ts",
+    "class": "CreateAgent",
+    "parentPath": ""
+  },
+  "15b8c0df45c": {
+    "path": "Scene\\AgentFinancialRecord.ts",
+    "class": "AgentFinancialRecord",
+    "parentPath": ""
+  },
+  "15b8c13b2c5": {
+    "path": "Scene\\AgentManager.ts",
+    "class": "AgentManager",
+    "parentPath": ""
+  },
+  "15b9df6bb96": {
+    "path": "..\\resource\\skin\\Misc\\Loding\\Loding.ts",
+    "class": "Loding",
+    "parentPath": ""
+  },
+  "15ba32355d6": {
+    "path": "..\\resource\\skin\\Scene\\Group\\CreateClubScene\\CreatClub.ts",
+    "class": "CreatClub",
+    "parentPath": ""
+  }
 }

@@ -38,14 +38,14 @@ class ChargeForAgentTips extends eui.Component {
 				return;
 			} else {
 				chargeInfo.addItem({ k: "qty", v: Number(chargeNumber) });
-				zHttp.getInstance().sendHttpRequest(this, 'account/recharge', egret.HttpMethod.POST, (e: egret.Event) => {
+				zHttp.getInstance().sendHttpRequest(this, 'account/recharge', egret.HttpMethod.POST, chargeInfo, (e: egret.Event) => {
 					let foo = zHttp.getInstance().onHttpCompleted(e);
 					if (foo) {
 						Alert.show(foo['message']);
 						UserObject.getUserInfo();
 						UserObject.getUsersAgentInfo();
 					}
-				}, chargeInfo);
+				});
 				this.parent.removeChild(this);
 			}
 		}, this);

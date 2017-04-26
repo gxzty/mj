@@ -20,38 +20,42 @@ class zHttp {
     public create(): void {
         console.log("create zHttp");
     }
-    public sendHttpRequest(obj, url: string, _type: string, completeCallback?, params?: eui.ArrayCollection, errorCallback?, progressCallback?): void {
-        console.log(obj);
-        let flag = false;
-        if (params == null) {
-            flag = true;
-            console.log("empty http");
-            params = new eui.ArrayCollection();
-            params.addItem({ k: 'token', v: UserObject.getToken() });
-            let time = String(new Date().getTime());
-            params.addItem({ k: 'timestamp', v: time });
-            params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5(this.APP_SECERT + time)) });
+
+    public sendHttpRequestWithGameType(obj, url: string, _type: string, params: eui.ArrayCollection, completeCallback: Function = this.onHttpDone, errorCallback: Function = this.onHttpIOError, progressCallback: Function = this.onHttpProgress) {
+        this.sendHttpRequest(
+            obj,
+            GlobalConfig.getGameType() + url,
+            _type,
+            params ? params : null,
+            completeCallback,
+            errorCallback,
+            progressCallback
+        );
+    }
+
+
+    public sendHttpRequest(obj, url: string, _type: string, params: eui.ArrayCollection, completeCallback: Function = this.onHttpDone, errorCallback: Function = this.onHttpIOError, progressCallback: Function = this.onHttpProgress): void {
+        var pUrl = _type == egret.HttpMethod.POST ? "" : "?";
+        if (params != null) {
+            console.log("length:" + params.length);
         }
-        var pUrl = "";
         if (params != null && params.length > 0) {
-            //console.log("params.length=", params.length);
-            if (!flag) {
-                params.addItem({ k: 'token', v: UserObject.getToken() });
-                let time = String(new Date().getTime());
-                params.addItem({ k: 'timestamp', v: time });
-                params.addItem({ k: 'key', v: Encrypt.md5(Encrypt.md5(this.APP_SECERT + time)) });
-            }
-            pUrl = "?";
             for (var i = 0; i < params.length; i++) {
-                if (pUrl != "") {
+                if (pUrl != "" && pUrl != "?") {
                     pUrl = pUrl + "&";
                 }
                 pUrl = pUrl + params.getItemAt(i).k + "=" + params.getItemAt(i).v;
             }
         }
 
+        let time = String(new Date().getTime());
+        if (pUrl != '') {
+            pUrl = pUrl + '&';
+        }
+        pUrl = pUrl + 'token=' + UserObject.getToken() + '&timestamp=' + time + '&key=' + Encrypt.md5(Encrypt.md5(this.APP_SECERT + time));
 
-        console.log("url:" + this.SERVER_ADDRESS + url + pUrl);
+        console.log("url:" + this.SERVER_ADDRESS + url);
+        console.log("data:" + pUrl);
         var request: egret.HttpRequest = new egret.HttpRequest();
         _type == egret.HttpMethod.POST ? request.open(this.SERVER_ADDRESS + url, _type)
             : request.open(this.SERVER_ADDRESS + url + pUrl, _type);
@@ -60,9 +64,9 @@ class zHttp {
 
         _type == egret.HttpMethod.POST ? request.send(pUrl) : request.send();
 
-        request.addEventListener(egret.Event.COMPLETE, completeCallback ? completeCallback : this.onHttpDone, obj);
-        request.addEventListener(egret.IOErrorEvent.IO_ERROR, errorCallback ? errorCallback : this.onHttpIOError, obj);
-        request.addEventListener(egret.ProgressEvent.PROGRESS, progressCallback ? progressCallback : this.onHttpProgress, obj);
+        request.addEventListener(egret.Event.COMPLETE, completeCallback, obj);
+        request.addEventListener(egret.IOErrorEvent.IO_ERROR, errorCallback, obj);
+        request.addEventListener(egret.ProgressEvent.PROGRESS, progressCallback, obj);
     }
 
     private onHttpProgress(event: egret.ProgressEvent): void {

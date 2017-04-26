@@ -4,7 +4,7 @@ class MJManagerScene extends eui.Component {
 	private createClubBtn: eui.Button;
 	private clubManagerBtn: eui.Button;
 	private chargeToPlayerBtn: eui.Button;
-	private feedBackBtn: eui.Button;
+	private clubPeopleManagerBtn: eui.Button;
 	private rightBtn: eui.Button;
 	private leftBtn: eui.Button;
 
@@ -26,19 +26,19 @@ class MJManagerScene extends eui.Component {
 
 
 		this.createClubBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			Alert.show('创建俱乐部');
+			SceneManager.getInstance().replaceLayer(CreateClubScene);
 		}, this);
 		this.clubManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
 			Alert.show('俱乐部管理');
 		}, this);
 
-		this.feedBackBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			Alert.show('意见反馈');
-		}, this);
 		this.chargeToPlayerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			Alert.show('充值');
+			Alert.show('用户充值');
 		}, this);
 
+		this.clubPeopleManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			Alert.show('俱乐部成员管理');
+		}, this);
 		this.leftBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
 			SceneManager.getInstance().backToLobby();
 		}, this);

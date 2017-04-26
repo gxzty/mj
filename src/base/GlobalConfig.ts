@@ -23,6 +23,6 @@ class GlobalConfig {
 }
 
 class GameType {
-	public static MaJiang = 'mj';
-	public static DouDiZhu = 'ddz';
+	public static MaJiang = 'mj/';
+	public static DouDiZhu = 'ddz/';
 }

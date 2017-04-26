@@ -2,8 +2,9 @@ class zUtils {
 	public static getText(t: eui.TextInput) {
 		return t.textDisplay.$getText();
 	}
-	public static initInput(i: eui.TextInput, s: string) {
+	public static initInput(i: eui.TextInput, s: string, multiline: boolean = false) {
 		i.prompt = s;
+		//i.textDisplay.multiline = wordWrap;
 	}
 	public static setLabelText(l: eui.Label, s: string) {
 		if (typeof s === 'string') {
@@ -13,7 +14,6 @@ class zUtils {
 		}
 	}
 	public static reSetInputText(i: eui.TextInput) {
-		//console.log(i);
 		i.text = "";
 	}
 	public constructor() {

@@ -20,7 +20,7 @@ class CreateAccount extends eui.Component implements eui.UIComponent {
 		return this.m_instance;
 	};
 	public onEnter() {
-		CreateAccount.getInstance().resetInput();
+		CreateAccount.getInstance().reSetInput();
 	}
 	public constructor() {
 		super();
@@ -51,16 +51,16 @@ class CreateAccount extends eui.Component implements eui.UIComponent {
 			createInfo.addItem({ k: "wechat", v: zUtils.getText(this.wechatInput) });
 			createInfo.addItem({ k: "qq", v: zUtils.getText(this.qqInput) });
 
-			zHttp.getInstance().sendHttpRequest(this, "account/create", egret.HttpMethod.POST, (e: egret.Event) => {
+			zHttp.getInstance().sendHttpRequest(this, "account/create", egret.HttpMethod.POST, createInfo, (e: egret.Event) => {
 				let foo = zHttp.getInstance().onHttpCompleted(e);
 				if (foo) {
 					//console.log(foo['results']);
 					Alert.showWithCallback(foo['message'], () => { SceneManager.getInstance().backToLobby(); });
 				}
-			}, createInfo);
+			});
 		}, this);
 	}
-	public resetInput() {
+	public reSetInput() {
 		zUtils.reSetInputText(this.accountInput);
 		zUtils.reSetInputText(this.passwordInput);
 		zUtils.reSetInputText(this.fullNameInput);

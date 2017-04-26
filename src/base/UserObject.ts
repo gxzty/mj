@@ -82,21 +82,21 @@ class UserObject {
 				try {
 					SceneManager.getInstance().getRunningLayer().setBelence(UserObject.getBalance());
 				} catch (e) {
-					console.log("切换场景过快!");
+					Alert.show("切换场景过快!");
 				}
 				//console.log(UserObject);
 			}
 		};
-		zHttp.getInstance().sendHttpRequest(this, "account/detail", egret.HttpMethod.POST, infoCallback);
+		zHttp.getInstance().sendHttpRequest(this, "account/detail", egret.HttpMethod.POST, null, infoCallback);
 	}
 
 	public static getUsersAgentInfo() {
 		//console.log("getUsersAgentInfo");
-		zHttp.getInstance().sendHttpRequest(this, "account/listing", egret.HttpMethod.POST, (e: egret.Event) => {
+		zHttp.getInstance().sendHttpRequest(this, "account/listing", egret.HttpMethod.POST, null, (e: egret.Event) => {
 			AgentManager.getInstance().resetGroupItems();
 			let foo = zHttp.getInstance().onHttpCompleted(e);
 			if (foo) {
-				//console.log(foo['results']);
+				console.log(foo['results']);
 				let agentArray = foo['results'];
 				for (let _i = 0; _i < agentArray.length; ++_i) {
 					let _agentItem = new AgentItem(agentArray[_i]);
@@ -109,11 +109,26 @@ class UserObject {
 
 	public static getChargeRecordInfo() {
 		//console.log("getChargeRecordInfo");
-		zHttp.getInstance().sendHttpRequest(this, "agent/listing", egret.HttpMethod.POST, (e: egret.Event) => {
+		zHttp.getInstance().sendHttpRequest(this, "account/record", egret.HttpMethod.POST, null, (e: egret.Event) => {
+			var _request = <egret.HttpRequest>e.currentTarget;
+			var _response = _request.response;
 			let foo = zHttp.getInstance().onHttpCompleted(e);
 			if (foo) {
-				//console.log(foo['results']);
-				let chargeRecordArray = foo['results'];
+				console.log(foo['message']);
+				// let chargeRecordArray = foo['results'];
+				let chargeRecordArray = [{
+					'id': '1',
+					'receiver': '2',
+					'count': '3',
+					'afterCharge': '4',
+					'chargeTime': '5'
+				}, {
+					'id': '2',
+					'receiver': '4',
+					'count': '6',
+					'afterCharge': '8',
+					'chargeTime': '10'
+				}];
 				for (let _i = 0; _i < chargeRecordArray.length; ++_i) {
 					let _chargeItem = new FinancialRecordItem(chargeRecordArray[_i]);
 					FinancialRecord.getInstance().addGroupItem(_chargeItem);

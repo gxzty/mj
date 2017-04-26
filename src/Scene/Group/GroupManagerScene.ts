@@ -3,6 +3,8 @@ class GroupManagerScene extends eui.Component {
 	private balanceText: eui.Label;
 	private MJSelectBtn: eui.Button;
 	private DDZSelectBtn: eui.Button;
+	private feedBackBtn: eui.Button;
+	private groupFinancialManagerBtn: eui.Button;
 	private rightBtn: eui.Button;
 	private leftBtn: eui.Button;
 
@@ -24,10 +26,20 @@ class GroupManagerScene extends eui.Component {
 
 
 		this.MJSelectBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			GlobalConfig.setGameType(GameType.MaJiang);
 			SceneManager.getInstance().replaceLayer(MJManagerScene);
 		}, this);
 		this.DDZSelectBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			GlobalConfig.setGameType(GameType.DouDiZhu);
 			Alert.show('斗地主');
+		}, this);
+
+		this.feedBackBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			Alert.show('意见反馈');
+		}, this);
+
+		this.groupFinancialManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
+			Alert.show('财务管理');
 		}, this);
 
 		this.leftBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {

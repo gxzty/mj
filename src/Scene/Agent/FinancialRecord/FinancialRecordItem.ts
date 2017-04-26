@@ -10,7 +10,7 @@ class FinancialRecordItem extends eui.Component {
 	public constructor(_agentItem) {
 		super();
 		this.skinName = "resource/skin/Scene/Agent/FinancialRecord/FinancialRecordItem.exml"
-		//console.log(_agentItem);
+		console.log(_agentItem);
 		zUtils.setLabelText(this.idLabel, _agentItem.receiver);
 		zUtils.setLabelText(this.receiverLabel, _agentItem.receiver);
 		zUtils.setLabelText(this.countLabel, _agentItem.receiver);
