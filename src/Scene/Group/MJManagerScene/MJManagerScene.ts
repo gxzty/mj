@@ -29,11 +29,12 @@ class MJManagerScene extends eui.Component {
 			SceneManager.getInstance().replaceLayer(CreateClubScene);
 		}, this);
 		this.clubManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			Alert.show('俱乐部管理');
+			SceneManager.getInstance().replaceLayer(ClubManagerScene);
 		}, this);
 
 		this.chargeToPlayerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
-			Alert.show('用户充值');
+			ChargeToUserScene.getInstance().setIsSingleClub(false);
+			SceneManager.getInstance().replaceLayer(ChargeToUserScene);
 		}, this);
 
 		this.clubPeopleManagerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {

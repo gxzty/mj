@@ -31,7 +31,7 @@ class AgentItem extends eui.Component {
 		this.chargeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
 			let chargeInfo = new eui.ArrayCollection();
 			chargeInfo.addItem({ k: "recharge_token", v: this.rechargeToken });
-			new ChargeForAgentTips(this.accountLabel.text, chargeInfo);
+			new ChargeForAgentTips(this.accountLabel.text, false, chargeInfo);
 		}, this);
 	}
 }

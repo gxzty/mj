@@ -54,7 +54,7 @@ class UserObject {
 		egret.localStorage.setItem('isRememberPass', LoginScene.getInstance().rememberPassCheckBox.$selected ? '1' : '0');
 		egret.localStorage.setItem('isAutoLogin', LoginScene.getInstance().autoLoginCheckBox.$selected ? '1' : '0');
 		let log = (p) => {
-			console.log(p + ':' + egret.localStorage.getItem(p) + "///");
+			//console.log(p + ':' + egret.localStorage.getItem(p) + "///");
 		};
 		log('username');
 		log('password');
@@ -82,7 +82,6 @@ class UserObject {
 				try {
 					SceneManager.getInstance().getRunningLayer().setBelence(UserObject.getBalance());
 				} catch (e) {
-					Alert.show("切换场景过快!");
 				}
 				//console.log(UserObject);
 			}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="ChoseAccountToChargeItem" width="720" height="413" xmlns:e="http://ns.egret.com/eui"
+<e:Skin class="ChoseAccountToChargeItemSkin" width="720" height="413" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing">
     <e:Image x="0" y="0" source="agent_manager_item_bg_png" />
     <e:Button id="chargeBtn" label="" x="280" y="331">

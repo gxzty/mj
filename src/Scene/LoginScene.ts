@@ -1,5 +1,5 @@
 class LoginScene extends eui.Component {
-	private loginBtn: eui.Button;
+	private loginBtn: zButton;
 	public phoneNumber: eui.TextInput;
 	public password: eui.TextInput;
 	public autoLoginCheckBox: eui.CheckBox;
@@ -33,7 +33,7 @@ class LoginScene extends eui.Component {
 			//123456
 			let loginInfo = 'username=' + this.phoneNumber.text + '&password=' + this.password.text;
 			let onCompleted = (event: egret.Event) => {
-				LoginScene.getInstance().loginBtn.$setEnabled(true);
+				//_loding.destory();
 				let foo = zHttp.getInstance().onHttpCompleted(event);
 				if (foo) {
 					// 成功
@@ -52,6 +52,7 @@ class LoginScene extends eui.Component {
 				}
 			}
 
+			Loding.getInstance().show('正在与服务器通讯,请稍候...');
 			var request: egret.HttpRequest = new egret.HttpRequest();
 			request.open("https://api.52plays.com/login", egret.HttpMethod.POST);
 
@@ -59,6 +60,7 @@ class LoginScene extends eui.Component {
 			request.send(loginInfo);
 			request.addEventListener(egret.Event.COMPLETE, onCompleted, this);
 			request.addEventListener(egret.IOErrorEvent.IO_ERROR, (e: egret.IOErrorEvent) => {
+				Loding.getInstance().destory();
 				console.log("HttpError");
 				console.log(event);
 			}, this);
@@ -79,11 +81,13 @@ class LoginScene extends eui.Component {
 			}
 		}, this);
 
-		this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, loginBtnCallback, this);
+		this.loginBtn.addEventListener(egret.TouchEvent.TOUCH_TAP,
+			loginBtnCallback,
+			this);
 	}
 	private getLocalInfo() {
 		let log = (p) => {
-			console.log(p + ':' + egret.localStorage.getItem(p));
+			//console.log(p + ':' + egret.localStorage.getItem(p));
 		};
 		log('username');
 		log('password');

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "default.thm_json,default.res_json,VSliderSkin_exml,VScrollBarSkin_exml,ToggleSwitchSkin_exml,TextInputSkin_exml,ScrollerSkin_exml,RadioButtonSkin_exml,ProgressBarSkin_exml,PanelSkin_exml,ItemRendererSkin_exml,HSliderSkin_exml,HScrollBarSkin_exml,CheckBoxSkin_exml,ButtonSkin_exml,alert_bg_png,alert_commit_btn_png,AlertSkin_exml,cancel_btn_png,charge_input_bg_png,ChargeForAgentTips_exml,Loding_exml,back_icon_png,exit_icon_png,Title_exml,agent_manager_item_bg_png,AgentManager_exml,charge_btn_png,ChoseAccountToChargeItem_exml,create_agent_btn_png,CreateAccount_exml,financial_record_bg_png,FinancialRecord_exml,FinancialRecordItem_exml,lobby_agent_manager_png,lobby_create_agent_png,lobby_financial_record_png,lobby_title_png,LobbyScene_exml,club_annoc_bg_png,create_club_btn_png,CreateClubScene_exml,ddz_manager_btn_png,feed_back_png,group_financial_manager_png,GroupManagerScene_exml,mj_manager_btn_png,charge_to_user_png,create_club_png,manager_club_people_png,manager_club_png,MJManagerScene_exml,login_btn_png,login_input_png,LoginScene_exml,logo_png",
+			"keys": "default.thm_json,default.res_json,VSliderSkin_exml,VScrollBarSkin_exml,ToggleSwitchSkin_exml,TextInputSkin_exml,ScrollerSkin_exml,RadioButtonSkin_exml,ProgressBarSkin_exml,PanelSkin_exml,ItemRendererSkin_exml,HSliderSkin_exml,HScrollBarSkin_exml,CheckBoxSkin_exml,ButtonSkin_exml,alert_bg_png,alert_commit_btn_png,AlertSkin_exml,cancel_btn_png,charge_input_bg_png,ChargeForAgentTips_exml,back_icon_png,exit_icon_png,Title_exml,agent_manager_item_bg_png,AgentManager_exml,charge_btn_png,ChoseAccountToChargeItem_exml,create_agent_btn_png,CreateAccount_exml,financial_record_bg_png,FinancialRecord_exml,FinancialRecordItem_exml,lobby_agent_manager_png,lobby_create_agent_png,lobby_financial_record_png,lobby_title_png,LobbyScene_exml,club_annoc_bg_png,create_club_btn_png,CreateClubScene_exml,ddz_manager_btn_png,feed_back_png,group_financial_manager_png,GroupManagerScene_exml,mj_manager_btn_png,charge_to_user_png,create_club_png,manager_club_people_png,manager_club_png,MJManagerScene_exml,login_btn_png,login_input_png,LoginScene_exml,logo_png,club_manager_item_bg_png,ClubManagerItem_exml,ClubManagerScene_exml,club_manager_club_png,zhixian_png,search_user_png,user_charge_btn_png,ChargeToUserScene_exml,ChargeToUserItem_exml,description_json,button_down_png,button_up_png,checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,thumb_pb_png,track_pb_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,track_sb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,BigTextInputSkin_exml,LodingSkin_exml",
 			"name": "preload"
 		}
 	],
@@ -232,11 +232,6 @@
 			"name": "charge_input_bg_png"
 		},
 		{
-			"url": "skin/Misc/Loding/Loding.exml",
-			"type": "bin",
-			"name": "Loding_exml"
-		},
-		{
 			"url": "skin/Misc/Title/Title.exml",
 			"type": "bin",
 			"name": "Title_exml"
@@ -405,6 +400,61 @@
 			"url": "skin/Scene/Group/MJManagerScene/manager_club_people.png",
 			"type": "image",
 			"name": "manager_club_people_png"
+		},
+		{
+			"url": "skin/Scene/Group/ClubManagerScene/club_manager_item_bg.png",
+			"type": "image",
+			"name": "club_manager_item_bg_png"
+		},
+		{
+			"url": "skin/Scene/Group/ClubManagerScene/ClubManagerItem.exml",
+			"type": "bin",
+			"name": "ClubManagerItem_exml"
+		},
+		{
+			"url": "skin/Scene/Group/ClubManagerScene/ClubManagerScene.exml",
+			"type": "bin",
+			"name": "ClubManagerScene_exml"
+		},
+		{
+			"url": "skin/Scene/Group/ClubManagerScene/club_manager_club.png",
+			"type": "image",
+			"name": "club_manager_club_png"
+		},
+		{
+			"url": "skin/Scene/Group/ChargeToUserScene/zhixian.png",
+			"type": "image",
+			"name": "zhixian_png"
+		},
+		{
+			"url": "skin/Scene/Group/ChargeToUserScene/search_user.png",
+			"type": "image",
+			"name": "search_user_png"
+		},
+		{
+			"url": "skin/Scene/Group/ChargeToUserScene/user_charge_btn.png",
+			"type": "image",
+			"name": "user_charge_btn_png"
+		},
+		{
+			"url": "skin/Scene/Group/ChargeToUserScene/ChargeToUserScene.exml",
+			"type": "bin",
+			"name": "ChargeToUserScene_exml"
+		},
+		{
+			"url": "skin/Scene/Group/ChargeToUserScene/ChargeToUserItem.exml",
+			"type": "bin",
+			"name": "ChargeToUserItem_exml"
+		},
+		{
+			"url": "skin/Misc/BigTextInputSkin.exml",
+			"type": "bin",
+			"name": "BigTextInputSkin_exml"
+		},
+		{
+			"url": "skin/Misc/Loding/LodingSkin.exml",
+			"type": "bin",
+			"name": "LodingSkin_exml"
 		}
 	]
 }

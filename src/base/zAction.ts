@@ -28,4 +28,11 @@ class zAction {
 			.to({ scaleX: 0.01, scaleY: 0.01, alpha: 0.01 }, 200, egret.Ease.quintOut)
 			.call(_callback);
 	}
+	public ButtonClick(target, _callback: Function) {
+		egret.Tween.get(target, { loop: false })
+			.to({ scaleX: 0.9, scaleY: 0.9 }, 50, egret.Ease.quintOut)
+			.to({ scaleX: 1.1, scaleY: 1.1 }, 50, egret.Ease.quintOut)
+			.to({ scaleX: 1, scaleY: 1 }, 50, egret.Ease.quintOut)
+			.call(_callback);
+	}
 }

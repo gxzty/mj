@@ -41,4 +41,7 @@ class SceneManager extends eui.UILayer {
 	private checkLayerChange(_layer) {
 		_layer.getInstance().onEnter();
 	}
+	public setTitle() {
+
+	}
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChargeToUserItemSkin" width="720" height="100" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+    <e:Button id="chargeToUserBtn" label="" x="568" y="18">
+        <e:skinName>
+            <e:Skin states="up,down,disabled">
+                <e:Image width="100%" height="100%" source="user_charge_btn_png" />
+                <e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0" />
+            </e:Skin>
+        </e:skinName>
+    </e:Button>
+    <e:Image x="26" y="98" source="zhixian_png" />
+    <e:Label id="userNameLabel" text="123" left="39" verticalCenter="0" size="24" textColor="0x000000" />
+    <e:Label id="userBalanceLabel" text="123" horizontalCenter="91.5" verticalCenter="0" size="24" textColor="0xf95507" />
+</e:Skin>

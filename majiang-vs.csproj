@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{9d6ec548-ad69-4125-813c-1d3694c093ff}</ProjectGuid>
+        <ProjectHome />
+        <EgretProject>True</EgretProject>
+        <NewEgretProject>True</NewEgretProject>
+        <ProjectView>ShowAllFiles</ProjectView>
+        <OutputType>Library</OutputType>
+        <TransformWebConfigEnabled>False</TransformWebConfigEnabled>
+        <AutoParameterizationWebConfigConnectionStrings>False</AutoParameterizationWebConfigConnectionStrings>
+        <StartupFile />
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+        <TypeScriptSourceMap>true</TypeScriptSourceMap>
+        <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+        <EnableTypeScript>true</EnableTypeScript>
+        <TypeScriptEnabled>true</TypeScriptEnabled>
+        <TypeScriptEmitBOM>false</TypeScriptEmitBOM>
+        <TypeScriptCompileOnSaveEnabled>false</TypeScriptCompileOnSaveEnabled>
+        <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+        <TypeScriptOutDir>bin-debug\</TypeScriptOutDir>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include=".gitignore" />
+        <Content Include="egretProperties.json" />
+        <Content Include="favicon.ico" />
+        <Content Include="index.html" />
+        <Content Include="majiang-vs.csproj" />
+        <Content Include="tsconfig.json" />
+        <Content Include="web.config" />
+        <Content Include="wingProperties.json" />
+        <Compile Include="bin-debug\AssetAdapter.js" />
+        <Content Include="bin-debug\AssetAdapter.js.map" />
+        <Compile Include="bin-debug\LoadingUI.js" />
+        <Content Include="bin-debug\LoadingUI.js.map" />
+        <Compile Include="bin-debug\Main.js" />
+        <Content Include="bin-debug\Main.js.map" />
+        <Compile Include="bin-debug\ThemeAdapter.js" />
+        <Content Include="bin-debug\ThemeAdapter.js.map" />
+        <TypeScriptCompile Include="libs\exml.e.d.ts" />
+        <Compile Include="polyfill\promise.js" />
+        <Compile Include="polyfill\promise.min.js" />
+        <Content Include="resource\default.res.json" />
+        <Content Include="resource\default.thm.json" />
+        <TypeScriptCompile Include="src\AssetAdapter.ts" />
+        <TypeScriptCompile Include="src\LoadingUI.ts" />
+        <TypeScriptCompile Include="src\Main.ts" />
+        <TypeScriptCompile Include="src\ThemeAdapter.ts" />
+        <Compile Include="bin-debug\base\Encrypt.js" />
+        <Content Include="bin-debug\base\Encrypt.js.map" />
+        <Compile Include="bin-debug\base\GlobalConfig.js" />
+        <Content Include="bin-debug\base\GlobalConfig.js.map" />
+        <Compile Include="bin-debug\base\UserObject.js" />
+        <Content Include="bin-debug\base\UserObject.js.map" />
+        <Compile Include="bin-debug\base\zAction.js" />
+        <Content Include="bin-debug\base\zAction.js.map" />
+        <Compile Include="bin-debug\base\zHttp.js" />
+        <Content Include="bin-debug\base\zHttp.js.map" />
+        <Compile Include="bin-debug\base\zUtils.js" />
+        <Content Include="bin-debug\base\zUtils.js.map" />
+        <Compile Include="bin-debug\Misc\Alert.js" />
+        <Content Include="bin-debug\Misc\Alert.js.map" />
+        <Compile Include="bin-debug\Misc\ChargeForAgent.js" />
+        <Content Include="bin-debug\Misc\ChargeForAgent.js.map" />
+        <Compile Include="bin-debug\Misc\Loding.js" />
+        <Content Include="bin-debug\Misc\Loding.js.map" />
+        <Compile Include="bin-debug\Scene\LoginScene.js" />
+        <Content Include="bin-debug\Scene\LoginScene.js.map" />
+        <Compile Include="bin-debug\Scene\SceneManager.js" />
+        <Content Include="bin-debug\Scene\SceneManager.js.map" />
+        <Compile Include="bin-debug\Scene\Agent\CreateAccount.js" />
+        <Content Include="bin-debug\Scene\Agent\CreateAccount.js.map" />
+        <Compile Include="bin-debug\Scene\Agent\LobbyScene.js" />
+        <Content Include="bin-debug\Scene\Agent\LobbyScene.js.map" />
+        <Compile Include="bin-debug\Scene\Group\GroupManagerScene.js" />
+        <Content Include="bin-debug\Scene\Group\GroupManagerScene.js.map" />
+        <Compile Include="bin-debug\Scene\Agent\AgentManager\AgentItem.js" />
+        <Content Include="bin-debug\Scene\Agent\AgentManager\AgentItem.js.map" />
+        <Compile Include="bin-debug\Scene\Agent\AgentManager\AgentManager.js" />
+        <Content Include="bin-debug\Scene\Agent\AgentManager\AgentManager.js.map" />
+        <Compile Include="bin-debug\Scene\Agent\FinancialRecord\FinancialRecord.js" />
+        <Content Include="bin-debug\Scene\Agent\FinancialRecord\FinancialRecord.js.map" />
+        <Compile Include="bin-debug\Scene\Agent\FinancialRecord\FinancialRecordItem.js" />
+        <Content Include="bin-debug\Scene\Agent\FinancialRecord\FinancialRecordItem.js.map" />
+        <Compile Include="bin-debug\Scene\Group\ChargeToUserScene\ChargeToUserItem.js" />
+        <Content Include="bin-debug\Scene\Group\ChargeToUserScene\ChargeToUserItem.js.map" />
+        <Compile Include="bin-debug\Scene\Group\ChargeToUserScene\ChargeToUserScene.js" />
+        <Content Include="bin-debug\Scene\Group\ChargeToUserScene\ChargeToUserScene.js.map" />
+        <Compile Include="bin-debug\Scene\Group\ClubManagerScene\ClubManagerItem.js" />
+        <Content Include="bin-debug\Scene\Group\ClubManagerScene\ClubManagerItem.js.map" />
+        <Compile Include="bin-debug\Scene\Group\ClubManagerScene\ClubManagerScene.js" />
+        <Content Include="bin-debug\Scene\Group\ClubManagerScene\ClubManagerScene.js.map" />
+        <Compile Include="bin-debug\Scene\Group\CreateClub\CreateClubScene.js" />
+        <Content Include="bin-debug\Scene\Group\CreateClub\CreateClubScene.js.map" />
+        <Compile Include="bin-debug\Scene\Group\MJManagerScene\MJManagerScene.js" />
+        <Content Include="bin-debug\Scene\Group\MJManagerScene\MJManagerScene.js.map" />
+        <Content Include="libs\md5\md5-min.d.json" />
+        <TypeScriptCompile Include="libs\md5\md5-min.d.ts" />
+        <Compile Include="libs\md5\md5-min.js" />
+        <Content Include="libs\md5\md5-min.json" />
+        <TypeScriptCompile Include="libs\modules\egret\egret.d.ts" />
+        <Compile Include="libs\modules\egret\egret.js" />
+        <Compile Include="libs\modules\egret\egret.min.js" />
+        <Compile Include="libs\modules\egret\egret.native.js" />
+        <Compile Include="libs\modules\egret\egret.native.min.js" />
+        <Compile Include="libs\modules\egret\egret.web.js" />
+        <Compile Include="libs\modules\egret\egret.web.min.js" />
+        <TypeScriptCompile Include="libs\modules\eui\eui.d.ts" />
+        <Compile Include="libs\modules\eui\eui.js" />
+        <Compile Include="libs\modules\eui\eui.min.js" />
+        <TypeScriptCompile Include="libs\modules\res\res.d.ts" />
+        <Compile Include="libs\modules\res\res.js" />
+        <Compile Include="libs\modules\res\res.min.js" />
+        <TypeScriptCompile Include="libs\modules\tween\tween.d.ts" />
+        <Compile Include="libs\modules\tween\tween.js" />
+        <Compile Include="libs\modules\tween\tween.min.js" />
+        <Content Include="resource\config\description.json" />
+        <Content Include="resource\eui_skins\ButtonSkin.exml" />
+        <Content Include="resource\eui_skins\CheckBoxSkin.exml" />
+        <Content Include="resource\eui_skins\HScrollBarSkin.exml" />
+        <Content Include="resource\eui_skins\HSliderSkin.exml" />
+        <Content Include="resource\eui_skins\ItemRendererSkin.exml" />
+        <Content Include="resource\eui_skins\PanelSkin.exml" />
+        <Content Include="resource\eui_skins\ProgressBarSkin.exml" />
+        <Content Include="resource\eui_skins\RadioButtonSkin.exml" />
+        <Content Include="resource\eui_skins\ScrollerSkin.exml" />
+        <Content Include="resource\eui_skins\TextInputSkin.exml" />
+        <Content Include="resource\eui_skins\ToggleSwitchSkin.exml" />
+        <Content Include="resource\eui_skins\VScrollBarSkin.exml" />
+        <Content Include="resource\eui_skins\VSliderSkin.exml" />
+        <Content Include="resource\assets\Button\button_down.png" />
+        <Content Include="resource\assets\Button\button_up.png" />
+        <Content Include="resource\assets\CheckBox\checkbox_select_disabled.png" />
+        <Content Include="resource\assets\CheckBox\checkbox_select_down.png" />
+        <Content Include="resource\assets\CheckBox\checkbox_select_up.png" />
+        <Content Include="resource\assets\CheckBox\checkbox_unselect.png" />
+        <Content Include="resource\assets\ItemRenderer\selected.png" />
+        <Content Include="resource\assets\Panel\border.png" />
+        <Content Include="resource\assets\Panel\header.png" />
+        <Content Include="resource\assets\ProgressBar\thumb_pb.png" />
+        <Content Include="resource\assets\ProgressBar\track_pb.png" />
+        <Content Include="resource\assets\RadioButton\radiobutton_select_disabled.png" />
+        <Content Include="resource\assets\RadioButton\radiobutton_select_down.png" />
+        <Content Include="resource\assets\RadioButton\radiobutton_select_up.png" />
+        <Content Include="resource\assets\RadioButton\radiobutton_unselect.png" />
+        <Content Include="resource\assets\ScrollBar\roundthumb.png" />
+        <Content Include="resource\assets\ScrollBar\track_sb.png" />
+        <Content Include="resource\assets\Slider\thumb.png" />
+        <Content Include="resource\assets\Slider\track.png" />
+        <Content Include="resource\assets\Slider\tracklight.png" />
+        <Content Include="resource\assets\ToggleSwitch\handle.png" />
+        <Content Include="resource\assets\ToggleSwitch\off.png" />
+        <Content Include="resource\assets\ToggleSwitch\on.png" />
+        <Content Include="resource\skin\Misc\BigTextInputSkin.exml" />
+        <Content Include="resource\skin\Misc\Alert\AlertSkin.exml" />
+        <Content Include="resource\skin\Misc\Alert\alert_bg.png" />
+        <Content Include="resource\skin\Misc\Alert\alert_commit_btn.png" />
+        <Content Include="resource\skin\Misc\Alert\cancel_btn.png" />
+        <Content Include="resource\skin\Misc\ChargeForAgentTips\ChargeForAgentTips.exml" />
+        <Content Include="resource\skin\Misc\ChargeForAgentTips\charge_input_bg.png" />
+        <Content Include="resource\skin\Misc\Loding\LodingSkin.exml" />
+        <Content Include="resource\skin\Misc\Title\back_icon.png" />
+        <Content Include="resource\skin\Misc\Title\exit_icon.png" />
+        <Content Include="resource\skin\Misc\Title\Title.exml" />
+        <Content Include="resource\skin\Scene\Login\LoginScene.exml" />
+        <Content Include="resource\skin\Scene\Login\login_btn.png" />
+        <Content Include="resource\skin\Scene\Login\login_input.png" />
+        <Content Include="resource\skin\Scene\Login\logo.png" />
+        <Content Include="resource\skin\Scene\Agent\AgentManager\AgentManager.exml" />
+        <Content Include="resource\skin\Scene\Agent\AgentManager\agent_manager_item_bg.png" />
+        <Content Include="resource\skin\Scene\Agent\AgentManager\charge_btn.png" />
+        <Content Include="resource\skin\Scene\Agent\AgentManager\ChoseAccountToChargeItem.exml" />
+        <Content Include="resource\skin\Scene\Agent\CreateAccount\CreateAccount.exml" />
+        <Content Include="resource\skin\Scene\Agent\CreateAccount\create_agent_btn.png" />
+        <Content Include="resource\skin\Scene\Agent\FinancialRecord\FinancialRecord.exml" />
+        <Content Include="resource\skin\Scene\Agent\FinancialRecord\FinancialRecordItem.exml" />
+        <Content Include="resource\skin\Scene\Agent\FinancialRecord\financial_record_bg.png" />
+        <Content Include="resource\skin\Scene\Agent\Lobby\LobbyScene.exml" />
+        <Content Include="resource\skin\Scene\Agent\Lobby\lobby_agent_manager.png" />
+        <Content Include="resource\skin\Scene\Agent\Lobby\lobby_create_agent.png" />
+        <Content Include="resource\skin\Scene\Agent\Lobby\lobby_financial_record.png" />
+        <Content Include="resource\skin\Scene\Agent\Lobby\lobby_title.png" />
+        <Content Include="resource\skin\Scene\Group\ChargeToUserScene\ChargeToUserItem.exml" />
+        <Content Include="resource\skin\Scene\Group\ChargeToUserScene\ChargeToUserScene.exml" />
+        <Content Include="resource\skin\Scene\Group\ChargeToUserScene\search_user.png" />
+        <Content Include="resource\skin\Scene\Group\ChargeToUserScene\user_charge_btn.png" />
+        <Content Include="resource\skin\Scene\Group\ChargeToUserScene\zhixian.png" />
+        <Content Include="resource\skin\Scene\Group\ClubManagerScene\ClubManagerItem.exml" />
+        <Content Include="resource\skin\Scene\Group\ClubManagerScene\ClubManagerScene.exml" />
+        <Content Include="resource\skin\Scene\Group\ClubManagerScene\club_manager_club.png" />
+        <Content Include="resource\skin\Scene\Group\ClubManagerScene\club_manager_item_bg.png" />
+        <Content Include="resource\skin\Scene\Group\CreateClubScene\club_annoc_bg.png" />
+        <Content Include="resource\skin\Scene\Group\CreateClubScene\CreateClubScene.exml" />
+        <Content Include="resource\skin\Scene\Group\CreateClubScene\create_club_btn.png" />
+        <Content Include="resource\skin\Scene\Group\GroupManagerScene\ddz_manager_btn.png" />
+        <Content Include="resource\skin\Scene\Group\GroupManagerScene\feed_back.png" />
+        <Content Include="resource\skin\Scene\Group\GroupManagerScene\GroupManagerScene.exml" />
+        <Content Include="resource\skin\Scene\Group\GroupManagerScene\group_financial_manager.png" />
+        <Content Include="resource\skin\Scene\Group\GroupManagerScene\mj_manager_btn.png" />
+        <Content Include="resource\skin\Scene\Group\MJManagerScene\charge_to_user.png" />
+        <Content Include="resource\skin\Scene\Group\MJManagerScene\create_club.png" />
+        <Content Include="resource\skin\Scene\Group\MJManagerScene\manager_club.png" />
+        <Content Include="resource\skin\Scene\Group\MJManagerScene\manager_club_people.png" />
+        <Content Include="resource\skin\Scene\Group\MJManagerScene\MJManagerScene.exml" />
+        <TypeScriptCompile Include="src\base\Encrypt.ts" />
+        <TypeScriptCompile Include="src\base\GlobalConfig.ts" />
+        <TypeScriptCompile Include="src\base\UserObject.ts" />
+        <TypeScriptCompile Include="src\base\zAction.ts" />
+        <TypeScriptCompile Include="src\base\zHttp.ts" />
+        <TypeScriptCompile Include="src\base\zUtils.ts" />
+        <TypeScriptCompile Include="src\Misc\Alert.ts" />
+        <TypeScriptCompile Include="src\Misc\ChargeForAgent.ts" />
+        <TypeScriptCompile Include="src\Misc\Loding.ts" />
+        <TypeScriptCompile Include="src\Scene\LoginScene.ts" />
+        <TypeScriptCompile Include="src\Scene\SceneManager.ts" />
+        <TypeScriptCompile Include="src\Scene\Agent\CreateAccount.ts" />
+        <TypeScriptCompile Include="src\Scene\Agent\LobbyScene.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\GroupManagerScene.ts" />
+        <TypeScriptCompile Include="src\Scene\Agent\AgentManager\AgentItem.ts" />
+        <TypeScriptCompile Include="src\Scene\Agent\AgentManager\AgentManager.ts" />
+        <TypeScriptCompile Include="src\Scene\Agent\FinancialRecord\FinancialRecord.ts" />
+        <TypeScriptCompile Include="src\Scene\Agent\FinancialRecord\FinancialRecordItem.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\ChargeToUserScene\ChargeToUserItem.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\ChargeToUserScene\ChargeToUserScene.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\ClubManagerScene\ClubManagerItem.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\ClubManagerScene\ClubManagerScene.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\CreateClub\CreateClubScene.ts" />
+        <TypeScriptCompile Include="src\Scene\Group\MJManagerScene\MJManagerScene.ts" />
+        <Compile Include="template\runtime\native_loader.js" />
+        <Compile Include="template\runtime\native_require.js" />
+        <Compile Include="template\runtime\runtime_loader.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="bin-debug" />
+        <Folder Include="bin-debug\base" />
+        <Folder Include="bin-debug\Misc" />
+        <Folder Include="bin-debug\Scene" />
+        <Folder Include="bin-debug\Scene\Agent" />
+        <Folder Include="bin-debug\Scene\Agent\AgentManager" />
+        <Folder Include="bin-debug\Scene\Agent\FinancialRecord" />
+        <Folder Include="bin-debug\Scene\Group" />
+        <Folder Include="bin-debug\Scene\Group\ChargeToUserScene" />
+        <Folder Include="bin-debug\Scene\Group\ClubManagerScene" />
+        <Folder Include="bin-debug\Scene\Group\CreateClub" />
+        <Folder Include="bin-debug\Scene\Group\MJManagerScene" />
+        <Folder Include="libs" />
+        <Folder Include="libs\md5" />
+        <Folder Include="libs\modules" />
+        <Folder Include="libs\modules\egret" />
+        <Folder Include="libs\modules\eui" />
+        <Folder Include="libs\modules\res" />
+        <Folder Include="libs\modules\tween" />
+        <Folder Include="polyfill" />
+        <Folder Include="resource" />
+        <Folder Include="resource\assets" />
+        <Folder Include="resource\assets\Button" />
+        <Folder Include="resource\assets\CheckBox" />
+        <Folder Include="resource\assets\ItemRenderer" />
+        <Folder Include="resource\assets\Panel" />
+        <Folder Include="resource\assets\ProgressBar" />
+        <Folder Include="resource\assets\RadioButton" />
+        <Folder Include="resource\assets\ScrollBar" />
+        <Folder Include="resource\assets\Slider" />
+        <Folder Include="resource\assets\ToggleSwitch" />
+        <Folder Include="resource\config" />
+        <Folder Include="resource\eui_skins" />
+        <Folder Include="resource\skin" />
+        <Folder Include="resource\skin\Misc" />
+        <Folder Include="resource\skin\Misc\Alert" />
+        <Folder Include="resource\skin\Misc\ChargeForAgentTips" />
+        <Folder Include="resource\skin\Misc\Loding" />
+        <Folder Include="resource\skin\Misc\Title" />
+        <Folder Include="resource\skin\Scene" />
+        <Folder Include="resource\skin\Scene\Agent" />
+        <Folder Include="resource\skin\Scene\Agent\AgentManager" />
+        <Folder Include="resource\skin\Scene\Agent\CreateAccount" />
+        <Folder Include="resource\skin\Scene\Agent\FinancialRecord" />
+        <Folder Include="resource\skin\Scene\Agent\Lobby" />
+        <Folder Include="resource\skin\Scene\Group" />
+        <Folder Include="resource\skin\Scene\Group\ChargeToUserScene" />
+        <Folder Include="resource\skin\Scene\Group\ClubManagerScene" />
+        <Folder Include="resource\skin\Scene\Group\CreateClubScene" />
+        <Folder Include="resource\skin\Scene\Group\GroupManagerScene" />
+        <Folder Include="resource\skin\Scene\Group\MJManagerScene" />
+        <Folder Include="resource\skin\Scene\Login" />
+        <Folder Include="src" />
+        <Folder Include="src\base" />
+        <Folder Include="src\Misc" />
+        <Folder Include="src\Scene" />
+        <Folder Include="src\Scene\Agent" />
+        <Folder Include="src\Scene\Agent\AgentManager" />
+        <Folder Include="src\Scene\Agent\FinancialRecord" />
+        <Folder Include="src\Scene\Group" />
+        <Folder Include="src\Scene\Group\ChargeToUserScene" />
+        <Folder Include="src\Scene\Group\ClubManagerScene" />
+        <Folder Include="src\Scene\Group\CreateClub" />
+        <Folder Include="src\Scene\Group\MJManagerScene" />
+        <Folder Include="template" />
+        <Folder Include="template\runtime" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <StartPageUrl>index.html</StartPageUrl>
+              <StartAction>SpecificPage</StartAction>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>False</AutoAssignPort>
+              <IISUrl>
+              </IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <DevelopmentServerPort>16060</DevelopmentServerPort>
+              <CustomServerUrl>http://localhost:16060/</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+    <Import           Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" 
+            Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <Target Name="Build">
+    <Exec Command="egret build -sourcemap -nocoloroutput" ContinueOnError="false" StdOutEncoding="UTF-8" CustomErrorRegularExpression=".*error.*">
+      <Output TaskParameter="Outputs" PropertyName="EgretOutput" />
+      <Output TaskParameter="ExitCode" PropertyName="EgretExitCode" />
+    </Exec>
+  </Target>
+  <Target Name="Rebuild">
+    <Exec Command="egret build -e -nocoloroutput" ContinueOnError="false" StdOutEncoding="UTF-8" CustomErrorRegularExpression=".*error.*">
+      <Output TaskParameter="Outputs" PropertyName="EgretOutput" />
+      <Output TaskParameter="ExitCode" PropertyName="EgretExitCode" />
+    </Exec>
+  </Target>
+</Project>

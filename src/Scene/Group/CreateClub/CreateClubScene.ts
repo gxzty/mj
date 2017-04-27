@@ -9,7 +9,7 @@ class CreateClubScene extends eui.Component {
 	private leftBtn: eui.Button;
 
 	public onEnter() {
-		CreateClubScene.getInstance().reSetInput();
+		this.reSetInput();
 	}
 	public static getInstance(): CreateClubScene {
 		if (this.m_instance == null) {
@@ -24,7 +24,7 @@ class CreateClubScene extends eui.Component {
 
 		zUtils.initInput(this.clubNameInput, "请输入俱乐部名称");
 		zUtils.initInput(this.clubAnnocInput, "请输入俱乐部公告");
-		this.clubAnnocInput.maxChars = 140;
+		this.clubAnnocInput.maxChars = 300;
 		this.clubNameInput.maxChars = 10;
 		//this.clubAnnocInput.textDisplay.multiline = true;
 
@@ -33,8 +33,8 @@ class CreateClubScene extends eui.Component {
 				Alert.show('俱乐部名称不能超过10个字!');
 				return;
 			}
-			if (this.clubAnnocInput.text.length > 140) {
-				Alert.show('俱乐部公告不能超过140个字!');
+			if (this.clubAnnocInput.text.length > 300) {
+				Alert.show('俱乐部公告不能超过300个字!');
 				return;
 			}
 			let createClubInfo = new eui.ArrayCollection();

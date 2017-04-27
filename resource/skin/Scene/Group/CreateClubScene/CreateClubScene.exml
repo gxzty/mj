@@ -13,8 +13,8 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="360" y="48" anchorOffsetY="15" size="32"
-		         anchorOffsetX="128" />
+		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" anchorOffsetY="15" size="32" anchorOffsetX="128"
+		         horizontalCenter="0" verticalCenter="1" />
 		<e:Button id="rightBtn" label="" x="626.5" y="1" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
@@ -29,7 +29,8 @@
 	<e:Image x="30" y="337.51" source="club_annoc_bg_png" />
 	<e:Image x="30" y="192.96" source="club_annoc_bg_png" anchorOffsetY="0" height="55.12" />
 	<e:TextInput id="clubNameInput" width="642.73" height="59.83" anchorOffsetX="0" anchorOffsetY="0" x="29.27" y="192.96" />
-	<e:TextInput id="clubAnnocInput" width="642.73" height="440.13" anchorOffsetX="0" anchorOffsetY="0" top="340" left="31" />
+	<e:TextInput id="clubAnnocInput" width="642.73" height="440.13" anchorOffsetX="0" anchorOffsetY="0" top="340" left="31"
+	             skinName="skins.BigTextInputSkin" />
 	<e:Button id="createClubBtn" label="" x="67.64" y="910.82">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">

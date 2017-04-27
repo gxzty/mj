@@ -7,15 +7,12 @@ class ChargeForAgentTips extends eui.Component {
 	private chargeInputGroup: eui.Group;
 	private callback: Function;
 
-	public constructor(_chargeTo: string, chargeInfo: eui.ArrayCollection) {
+	public constructor(_chargeTo: string, _isToUser: boolean, chargeInfo?: eui.ArrayCollection) {
 		super();
-
 		this.skinName = 'resource/skin/Misc/ChargeForAgentTips/ChargeForAgentTips.exml';
-		this.anchorOffsetX = this.width / 2;
-		this.anchorOffsetY = this.height / 2;
-		this.$setX(SceneManager.getInstance().getWinSize().width / 2);
-		this.$setY(SceneManager.getInstance().getWinSize().height / 2);
+
 		zAction.getInstance().TipsOpen(this.chargeInputGroup);
+		let url = _isToUser ? 'club/user/recharge' : 'account/recharge';
 
 		zUtils.setLabelText(this.balanceLabel, UserObject.getBalance());
 		zUtils.setLabelText(this.chargeToLabel, _chargeTo);
@@ -38,12 +35,11 @@ class ChargeForAgentTips extends eui.Component {
 				return;
 			} else {
 				chargeInfo.addItem({ k: "qty", v: Number(chargeNumber) });
-				zHttp.getInstance().sendHttpRequest(this, 'account/recharge', egret.HttpMethod.POST, chargeInfo, (e: egret.Event) => {
+				zHttp.getInstance().sendHttpRequest(this, _isToUser ? GlobalConfig.getGameType() + url : url, egret.HttpMethod.POST, chargeInfo, (e: egret.Event) => {
 					let foo = zHttp.getInstance().onHttpCompleted(e);
 					if (foo) {
 						Alert.show(foo['message']);
-						UserObject.getUserInfo();
-						UserObject.getUsersAgentInfo();
+						_isToUser ? ChargeToUserScene.getInstance().onEnter() : UserObject.getUsersAgentInfo();
 					}
 				});
 				this.parent.removeChild(this);

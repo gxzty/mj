@@ -52,15 +52,19 @@ declare module skins{
 }
 declare class AlertSkin extends eui.Skin{
 }
+declare module skins{
+	class BigTextInputSkin extends eui.Skin{
+	}
+}
 declare class ChargeForAgentTipsSkin extends eui.Skin{
 }
 declare class LodingSkin extends eui.Skin{
 }
-declare class Title extends eui.Skin{
+declare class TitleSkin extends eui.Skin{
 }
 declare class AgentManagerSkin extends eui.Skin{
 }
-declare class ChoseAccountToChargeItem extends eui.Skin{
+declare class ChoseAccountToChargeItemSkin extends eui.Skin{
 }
 declare class CreateAgentSkin extends eui.Skin{
 }
@@ -69,6 +73,12 @@ declare class AgentFinancialRecordSkin extends eui.Skin{
 declare class FinancialRecordItemSkin extends eui.Skin{
 }
 declare class LobbySceneSkin extends eui.Skin{
+}
+declare class ChargeToUserItemSkin extends eui.Skin{
+}
+declare class ClubManagerSceneSkin extends eui.Skin{
+}
+declare class ClubManagerItemSkin extends eui.Skin{
 }
 declare class CreateClubSceneSkin extends eui.Skin{
 }

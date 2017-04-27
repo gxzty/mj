@@ -20,7 +20,7 @@ class CreateAccount extends eui.Component implements eui.UIComponent {
 		return this.m_instance;
 	};
 	public onEnter() {
-		CreateAccount.getInstance().reSetInput();
+		this.reSetInput();
 	}
 	public constructor() {
 		super();

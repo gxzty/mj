@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="AgentFinancialRecordSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui"
+<e:Skin class="ClubManagerSceneSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing">
-	<w:Config id="15b8c0df45c"></w:Config>
-	<e:Rect height="1184" x="0" y="96" width="720" fillColor="0xf5f5f5" />
+	<w:Config id="15b8c13b2c5"></w:Config>
+	<e:Rect width="720" height="1183.03" x="0" y="96.97" fillColor="0xf5f5f5" anchorOffsetY="0" />
 	<e:Group width="720" height="96" x="0" anchorOffsetX="0" anchorOffsetY="0" id="title">
 		<e:Rect width="720" height="96" x="0" y="0" scaleX="1" scaleY="1" fillColor="0xFF772E" />
 		<e:Button id="leftBtn" label="" scaleX="1" scaleY="1" x="0" y="1" anchorOffsetY="0">
@@ -25,6 +25,6 @@
 		</e:Button>
 	</e:Group>
 	<e:Scroller width="720" x="0" y="96" anchorOffsetX="0" anchorOffsetY="0" height="1184">
-		<e:Group id="financialRecordGroup" anchorOffsetX="0" anchorOffsetY="0"></e:Group>
+		<e:Group id="clubGroup" anchorOffsetX="0" anchorOffsetY="0" />
 	</e:Scroller>
 </e:Skin>

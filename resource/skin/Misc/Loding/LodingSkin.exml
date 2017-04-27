@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LodingSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="720"
+        height="1280">
+	<e:Rect width="720" height="1280" x="0" y="0" fillAlpha="0.5" />
+	<e:Label id="lodingContext" text="lodingContext" anchorOffsetX="0.5" anchorOffsetY="0.5" horizontalCenter="0"
+	         verticalCenter="-15" width="500" textAlign="center" x="109" y="610" scaleX="1" scaleY="1" textColor="0xffffff" />
+	<e:Button id="commitBtn" label="关闭" x="310" y="682" scaleX="1" scaleY="1" skinName="skins.ButtonSkin" />
+</e:Skin>

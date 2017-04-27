@@ -28,10 +28,6 @@ class Alert extends eui.Component {
 		super();
 		this.skinName = 'resource/skin/Misc/Alert/AlertSkin.exml';
 
-		this.anchorOffsetX = this.width / 2;
-		this.anchorOffsetY = this.height / 2;
-		this.$setX(SceneManager.getInstance().getWinSize().width / 2);
-		this.$setY(SceneManager.getInstance().getWinSize().height / 2);
 		zAction.getInstance().TipsOpen(this.alertGroup);
 
 		this.commitBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
@@ -39,13 +35,17 @@ class Alert extends eui.Component {
 				if (this.callback) {
 					this.callback();
 				}
-				this.parent.removeChild(this);
+				if (this && this.parent) {
+					this.parent.removeChild(this);
+				}
 			}).bind(this));
 		}, this);
 
 		this.cancelBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, (e: egret.TouchEvent) => {
 			zAction.getInstance().TipsClose(this.alertGroup, (() => {
-				this.parent.removeChild(this);
+				if (this && this.parent) {
+					this.parent.removeChild(this);
+				}
 			}).bind(this));
 		}, this);
 	}

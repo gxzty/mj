@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="Title" width="720" height="96" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="TitleSkin" width="720" height="96" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Group width="720" height="96" x="0" anchorOffsetX="0" anchorOffsetY="0" id="title">
 		<e:Rect width="720" height="96" x="0" y="0" scaleX="1" scaleY="1" fillColor="0xFF772E" />
 		<e:Button id="leftBtn" label="" scaleX="1" scaleY="1" x="0" y="1" anchorOffsetY="0">

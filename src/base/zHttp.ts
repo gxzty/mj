@@ -35,6 +35,7 @@ class zHttp {
 
 
     public sendHttpRequest(obj, url: string, _type: string, params: eui.ArrayCollection, completeCallback: Function = this.onHttpDone, errorCallback: Function = this.onHttpIOError, progressCallback: Function = this.onHttpProgress): void {
+        Loding.getInstance().show('正在与服务器通讯,请稍候...');
         var pUrl = _type == egret.HttpMethod.POST ? "" : "?";
         if (params != null) {
             console.log("length:" + params.length);
@@ -74,15 +75,18 @@ class zHttp {
     }
 
     private onHttpIOError(event: egret.IOErrorEvent): void {
+        Loding.getInstance().destory();
         console.log("HttpError");
         console.log(event);
     }
 
     private onHttpDone(event: egret.Event): void {
+        Loding.getInstance().destory();
         console.log("HttpDone");
     }
 
     public onHttpCompleted(event: egret.Event): boolean {
+        Loding.getInstance().destory();
         var _request = <egret.HttpRequest>event.currentTarget;
         var _response = _request.response;
         let foo = JSON.parse(_response);

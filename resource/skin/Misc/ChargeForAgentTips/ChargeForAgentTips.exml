@@ -20,7 +20,7 @@
                 </e:Skin>
             </e:skinName>
         </e:Button>
-        <e:Label id="titleDisplay" text="提示" textColor="0x000000" size="40" x="310" y="458.77" scaleX="1" scaleY="1" />
+        <e:Label id="titleDisplay" text="提示" textColor="0x000000" size="40" x="326" y="457.77" scaleX="1" scaleY="1" />
         <e:Label id="tips_0" text="可用金额 : " anchorOffsetX="0.2" anchorOffsetY="0.5" width="203" textAlign="center"
                  x="100" y="558" textColor="0x191919" scaleX="1" scaleY="1" />
         <e:Label id="tips_1" text="充值账户 : " anchorOffsetX="0.2" anchorOffsetY="0.5" width="203" textAlign="center"

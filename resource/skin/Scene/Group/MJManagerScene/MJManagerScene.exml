@@ -17,8 +17,8 @@
 				</e:Skin>
 			</e:skinName>
 		</e:Button>
-		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" x="360" y="48" anchorOffsetY="15" size="32"
-		         anchorOffsetX="128" />
+		<e:Label id="titleLabel" text="博艺游戏代理系统" scaleX="1" scaleY="1" anchorOffsetY="15" size="32" anchorOffsetX="128"
+		         horizontalCenter="0" verticalCenter="1" />
 		<e:Button id="rightBtn" label="" x="626.5" y="1" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0">
 			<e:skinName>
 				<e:Skin states="up,down,disabled">
